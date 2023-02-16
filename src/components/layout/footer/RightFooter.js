@@ -19,7 +19,7 @@ function RightFooter(){
                 </li>
 
                 <li>
-                   <a className={style.midLink} href="google.com" target="_blank"><i className="fas fa-phone-alt"></i> arabingeorgia</a>
+                   <a className={style.midLink} href="google.com" target="_blank"><i className="fas fa-phone-alt"></i> (470) 659-5499</a>
                 </li>
               
             </ul>

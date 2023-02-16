@@ -54,6 +54,9 @@ function Navbar() {
 
     // font awesome example
     // <FontAwesomeIcon icon={faCoffee} />
+    const handleClick = (event) => {
+        window.scrollTo(0, 0);
+      }
 
     return(
         <>
@@ -61,12 +64,12 @@ function Navbar() {
                 <img className={navbar ? 'logo active' : 'logo'} src={logo} alt="logo"  width="70px" height="65px"/>
 
                 <ul className={ Mobile ?  'nav-links-mobile' : (navbar ? 'nav-links active' : 'nav-links')}>
-                    <Link to="/" style={{background:"transparent"}}><li> {t('Home')}</li></Link>
-                    <Link to="/Blog" style={{background:"transparent"}}><li>{t('Blog')}</li></Link>
-                    <Link to="/Service" style={{background:"transparent"}}><li>{t('Service')}</li></Link>
-                    <Link to="/ReachOut" style={{background:"transparent"}}><li>{t('Reachout')}</li></Link>
-                    <Link to="/AboutUs" style={{background:"transparent"}}><li>{t('about us')}</li></Link>
-                    <Link to="/Jobs" style={{background:"transparent"}}><li>{t('Job')}</li></Link>
+                    <Link to="/" className="navLink" onClick={handleClick}><li> {t('Home')}</li></Link>
+                    <Link to="/Blog" className="navLink" onClick={handleClick}><li>{t('Blog')}</li></Link>
+                    <Link to="/Service" className="navLink" onClick={handleClick}><li>{t('Service')}</li></Link>
+                    <Link to="/ReachOut" className="navLink" onClick={handleClick}><li>{t('Reachout')}</li></Link>
+                    <Link to="/AboutUs" className="navLink" onClick={handleClick}><li>{t('about us')}</li></Link>
+                    <Link to="/Jobs" className="navLink" onClick={handleClick}><li>{t('Job')}</li></Link>
                     <div className={'buttonDiv'}>
                        
                         {/* <li><button onClick={handleOpenModalLogin}><GiPadlock/>{t('login')}</button></li> */}

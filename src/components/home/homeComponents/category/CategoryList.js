@@ -11,7 +11,7 @@ function CategoryList(){
         <>
         <div className={style.mainCategoryDiv}>
             <div className={`container ${style.container}`}>
-            <h1>Category List</h1>
+            <h1 className={style.categoryTitle}>Category List</h1>
             <TopList/>
             <BottomList/>
             <button className={style.seeAllBtn}>See All</button>

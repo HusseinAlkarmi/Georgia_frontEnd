@@ -1,0 +1,6 @@
+.jobHead{
+    width: 100%;
+    background-image: url("../../images/jobHeadBackground.png");
+    background-size: cover;
+    height: 570px;
+}
