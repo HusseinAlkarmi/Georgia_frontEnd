@@ -1,0 +1,55 @@
+.leftDiv{
+    display: flex;
+}
+
+.rightDiv{
+    display: flex;
+    align-items: center;
+}
+
+.leftImg{
+    margin: 10px auto;
+}
+
+.mainGetApp{
+    /* background: #E0F2FF; */
+    width: 100%;
+    padding-top: 150px;
+    background-image: url("../../images/getAppBackground.png");
+    background-size: cover;
+}
+
+.rightMainDiv{
+    padding: 10px 60px;
+}
+
+.rightTitle{
+    font-size: 4vw;
+    color: #2C75B0;
+    font-weight: 700;
+}
+
+.rightDic{
+    font-size: 2.1rem;
+    color: #3C7CAE;
+    margin: 12px 0;
+}
+
+.btnRow{
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+}
+
+.appBtn img{
+    width: 35%;
+    height: 50px;
+    border-radius: 10px !important;
+}
+.appBtn img{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px !important;
+    background-color: #C71C52 !important;
+    color: white !important;
+}

@@ -1,0 +1,63 @@
+.mainCategoryDiv{
+    width: 100%;
+    background-image: url("../../images/listBackground.png");
+    background-size: cover;
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+margin: 20px auto;
+}
+
+.cardBody{
+    background: #5E96C5;
+    margin: 10px;
+    height: 200px;
+    border-radius: 15px; 
+    position: relative;
+    width: 170px;
+    cursor: pointer;
+}
+
+.listImg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 15px; 
+
+}
+
+.cardListTitle{
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    font-size: 21px;
+    padding: 10px;
+    margin: 0;
+    display: none;
+}
+
+.cardBody:hover .cardListTitle{
+    display: block;
+}
+
+.cardBody:hover .listImg{
+    opacity: .5;
+}
+
+.seeAllBtn{
+    display: flex;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 20px;
+    color: white;
+    background-color: #D01A4D;
+    padding: 7px 20px;
+    border-radius: 15px;
+    width: 100px;
+    text-align: center;
+}
