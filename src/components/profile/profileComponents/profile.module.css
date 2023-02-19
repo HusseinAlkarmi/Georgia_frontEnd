@@ -1,0 +1,5 @@
+.profileImg{
+    margin: 10px auto;
+    box-shadow: 6px 6px 10px grey, -6px -6px 10px grey;
+    border-radius: 10px;
+}

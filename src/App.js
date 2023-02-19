@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 import Jobs from "./components/job/Job";
 import Navbar from "./components/layout/navbar/Navbar";
 import Footer from "./components/layout/footer/Footer";
+import Profile from './components/profile/Profile';
 
 
 function App() {
@@ -15,13 +16,13 @@ function App() {
         <Routes >
             <Route path="/" element={<Home />} exact />
             <Route path="/Jobs" element={<Jobs />} exact />
+            <Route path="/Profile" element={<Profile />} exact /> 
+
             {/* <Route path="/Blog" element={<Blog />} exact />
             <Route path="/Service" element={<Service />} exact />
             <Route path="/ReachOut" element={<Reachout />} exact />
             <Route path="/AboutUs" element={<About />} exact />
-            
-            <Route path="/Category" element={<Category />} exact />
-            <Route path="/Profile" element={<Profile />} exact /> */}
+            <Route path="/Category" element={<Category />} exact /> */}
         </Routes >
 
         <Footer/>

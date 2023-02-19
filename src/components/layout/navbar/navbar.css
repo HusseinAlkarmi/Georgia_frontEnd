@@ -11,84 +11,75 @@ li{
     text-decoration: none;
     list-style: none;
 }
+
 a{
     text-decoration: none;
 }
 
-.navLink{
-    text-decoration: none;
-    background: transparent;
-}
 
-.navbar{
+/* .navbar{
     font-size: 5px;
     line-height:5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color:transparent;
-    /* margin-top: 10px; */
     color:white;
     position: relative;
     z-index: 1;
     background: #6B97BE;
-}
+} */
 
-.navbar.active{
+/* .navbar.active{
     font-size: 5px;
     line-height:5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color:transparent;
-    /* margin-top: 10px; */
     color:white;
     margin-bottom: 50px;
-}
+} */
 
 /*logo */
-.logo {
+/* .logo {
     margin: auto;
-    /* margin-left:10%; */
     font-size:30px;
-    /* position:fixed ; */
     top: 15px;
     transition: 1s;
-
 }
+
 .logo.active{
     position:fixed ;
     top: 5px;
-    /* left: 0px; */
     z-index: 2000;
     margin: 0 10%;
 
-}
-.nav-links{
+} */
+
+/* .nav-links{
     margin: auto;
     display: flex;
     justify-content: center;
-    /* margin-right: 10%; */
-    /* position:fixed ; */
     top: 15px;
-    /* right: 0px; */
     transition: 1s;
+} */
 
-}
-.nav-links.active {
+/* .nav-links .active {
     background: rgba(0, 0, 0, 0.77);
     color: white;
     position: fixed;
     top: 0px;
-    /* left: 0px; */
     padding: 20px;
     min-width: 100%;
     z-index: 1000;
-}
-.nav-links.active li {
+} */
+
+/* .nav-links.active li {
     color: white;
-}
-.nav-links li {
+} */
+
+/* .nav-links li {
     color:black;
     font-size: 20px;
     padding: 0 10px;
@@ -99,12 +90,10 @@ a{
     text-transform: capitalize;
     text-decoration: none;
 
-}
-/*.nav-links,button,*/
-/*.nav-links li:hover{*/
-/*    background: red;*/
-/*}*/
-.nav-links li button{
+} */
+
+
+/* .nav-links li button{
     font-size:12px;
     font-weight: bolder;
     background: rgb(53,108,113);
@@ -112,15 +101,15 @@ a{
     color:white;
     margin-right:-30px;
     padding:0px 10px;
-}
-.buttonDiv{
+} */
 
+/* .buttonDiv{
     display: flex;
     flex-direction: row;
     align-items: start;
     border-radius: 50%;
+} */
 
-}
 /* mobile-menu-icon */
 
 button{
@@ -128,8 +117,8 @@ button{
     background: none;
     font-size: 20px;
     border-radius: 50%;
-
 }
+
 .mobile-menu-icon {
     display: none;
 }
@@ -141,12 +130,10 @@ button{
         left:0px;
         margin-bottom: 20px;
         color: white;
-
     }
     .navbar{
         font-size: 15px;
         color: white;
-
     }
     .nav-links{
         display: none;
@@ -192,11 +179,9 @@ button{
         bottom: 100%;
         z-index: 1000;
         margin-top: 10px;
-
         color: rgb(53,108,113);
         background: white;
         border-radius: 7px;
-
     }
 
 }
@@ -210,5 +195,4 @@ button{
 
 .closeBtnModal{
     position: relative;
-    /* left: 61%; */
 }
