@@ -1,9 +1,22 @@
 import React from "react";
 import cardStyle from "./card.module.css";
 import Card from "./Card"
+import RentCard from "./RentCard"
+import {useState} from "react";
 
-function CardSection(){
+import useFetch from "../../../../hooks/useFetch";
+
+function CardSection({index, rentPopUp, jobPopUp, setJobPopUp, setRentPopUp}){
+    
+    const [popId, setPopId] = useState();
+    
+
+    const[Data] = useFetch('https://jsonplaceholder.typicode.com/users');
+
+    const Cards = Data.slice(0, 6);
+
     return(
+
         <>
         <div className="">
             <div className={`row d-flex justify-content-end ${cardStyle.post_row}`}>  
@@ -13,12 +26,16 @@ function CardSection(){
             </div>
 
             <div className={`row pb-5 ${cardStyle.main_card_section}`}>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
+
+            {index == "Rent" ?  
+                Cards.map((item, index)=> (
+                        <RentCard setPopId={setPopId} id = {item.id} key={item.id} title = "Rent" name={item.name}/>
+                ))   :  
+                Cards.map((item, index)=> (
+                        <Card setPopId={setPopId} id = {item.id} key={item.id} title = "Job" name={item.name}/>
+            ))  }
+          
+
             </div>
 
         </div>

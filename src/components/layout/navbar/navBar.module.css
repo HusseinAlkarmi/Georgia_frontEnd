@@ -81,7 +81,6 @@
     background: #C81C50;
     border-radius: 7px;
     color:white;
-    /* margin-right:-30px; */
     padding:0px 10px;
 }
 
@@ -95,4 +94,24 @@
 
 .buttonDiv li{
     margin: 0;
+}
+
+.dropDown{
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    line-height: 0 !important;
+}
+
+.dropDown li {
+    font-size:12px;
+    font-weight: bolder;
+    background: #C81C50;
+    border-radius: 7px;
+    color:white;
+    padding:5px 10px !important;
+}
+
+.dropDown::after{
+    content: none !important;
 }

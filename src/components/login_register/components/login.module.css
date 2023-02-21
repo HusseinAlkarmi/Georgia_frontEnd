@@ -1,0 +1,141 @@
+.loginBody{
+
+    height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    height: fit-content;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.5);;
+    z-index: 1;
+}
+
+.profileImg{
+    width: 165px !important;
+    height: 180px;
+    border-radius: 50%;
+    margin: auto;
+    
+}
+
+.profileCard{
+    padding: 20px;
+    background-image: url('./images/loginBackground.jpg');
+    background-size: cover;
+    background-repeat:no-repeat; 
+    min-width: 400px;
+    max-width: 450px;
+    height: 100%;
+}
+
+.formRow{
+    border-bottom: 1px solid #00264B;
+    padding: 10px 0;
+}
+
+.formControl{
+    border: none;
+    color: #00264B;
+    font-size: 16px;
+    outline: none;
+}
+
+
+.formControl::placeholder {
+    color: #00264B;
+    font: 19px/3 sans-serif;
+}
+
+.icon{
+    font-size: 19px;
+    color: #00264B;
+}
+
+.rememberDiv{
+    padding: 0;
+}
+
+.rememberDiv .checkbox[type="checkbox"]:checked{
+    /* background-color: red !important; */
+    accent-color: #00264B !important;
+}
+.rememberDiv .checkbox[type="checkbox"]::after{
+    accent-color: #00264B !important;
+}
+
+.rememberLabel{
+    font-size: 13px;
+    color: white;
+}
+
+.forgotLink{
+    color: white;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.forgotDiv{
+    text-align: center;
+}
+
+.loginBtn{
+    background-color: #286F83 !important;
+    color: white !important;
+    /* box-shadow: -5px 10px 30px #286F83 ,  -10px 20px 40px #286F83 ; */
+}
+
+.loginTitleChoice{
+    text-align: center;
+    color: white;
+}
+
+.twitter{
+    color: #2BA7E4;
+}
+.facebook{
+    color: #405C9B;
+}
+.google{
+    color: #DC4D36;
+}
+
+.socialIcon{
+    font-size: 30px;
+}
+
+.socialIcon::before{
+    background: white;
+    display: block;
+    height: 22px;
+    line-height: 23px;
+    width: fit-content;
+}
+
+.regester{
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+
+.loginToAccount{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+
+.closeModalDiv{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 10px;
+}
+
+.closeBtnModal{
+    position: relative;
+    left: 61%;
+}

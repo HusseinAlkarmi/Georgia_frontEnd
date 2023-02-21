@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import style from './profile.module.css';
 
   
 function InfoRow(props) {
@@ -46,11 +47,11 @@ function InfoRow(props) {
         <>
 
       <div>
-      <h1>Profile Page</h1>
+      <h1 className={`mt-2 col-11 ${style.profileTitle}`}>Profile Page</h1>
       {isEditing ? (
         <>
-        <div className='row'>
-            <label htmlFor="name">Name:</label>
+        <div className={`row col-11 ${style.inputRow}`}>
+            <label className={style.labelProfile} htmlFor="name">User Name:</label>
             <input
                 type="text"
                 id="name"
@@ -60,8 +61,8 @@ function InfoRow(props) {
             />
         </div>
           
-        <div className='row'>
-            <label htmlFor="email">Email:</label>
+        <div className={`row col-11 ${style.inputRow}`}>
+            <label className={style.labelProfile} htmlFor="email">Email:</label>
             <input
                 type="email"
                 id="email"
@@ -71,8 +72,8 @@ function InfoRow(props) {
             />
           </div>
 
-          <div className='row'>
-            <label htmlFor="phone">Phone:</label>
+          <div className={`row col-11 ${style.inputRow}`}>
+            <label className={style.labelProfile} htmlFor="phone">Phone:</label>
             <input
                 type="tel"
                 id="phone"
@@ -81,15 +82,49 @@ function InfoRow(props) {
                 onChange={handleInputChange}
             />
            </div>
-          <button onClick={handleSaveClick}>Save</button>
-          <button onClick={handleCancelClick}>Cancel</button>
+           <div className={style.btnDiv}>
+            <button className={style.saveBtn} onClick={handleSaveClick}>Save</button>
+            <button className={style.cancelBtn} onClick={handleCancelClick}>Cancel</button>
+           </div>
         </>
       ) : (
         <>
-          <p>Name: {userData.name}</p>
-          <p>Email: {userData.email}</p>
-          <p>Phone: {userData.phone}</p>
-          <button onClick={handleEditClick}>Edit</button>
+          <div className={`row col-11 ${style.inputRow}`}>
+            <label className={style.labelProfile} htmlFor="name">User Name:</label>
+            <input
+            readOnly
+                type="text"
+                id="name"
+                name="name"
+                value={userData.name}
+                onChange={handleInputChange}
+            />
+        </div>
+          
+        <div className={`row col-11 ${style.inputRow}`}>
+            <label className={style.labelProfile} htmlFor="email">Email:</label>
+            <input
+            readOnly
+                type="email"
+                id="email"
+                name="email"
+                value={userData.email}
+                onChange={handleInputChange}
+            />
+          </div>
+
+          <div className={`row col-11 ${style.inputRow}`}>
+            <label className={style.labelProfile} htmlFor="phone">Phone:</label>
+            <input
+            readOnly
+                type="tel"
+                id="phone"
+                name="phone"
+                value={userData.phone}
+                onChange={handleInputChange}
+            />
+           </div>
+          <button className={style.editBtn} onClick={handleEditClick}>Edit</button>
         </>
       )}
     </div>

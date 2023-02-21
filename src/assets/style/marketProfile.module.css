@@ -1,0 +1,210 @@
+.serviceComponent {
+  background: #b0d2ea;
+}
+
+.MarketingContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  object-fit: contain;
+  padding: 40px 0px;
+  padding-bottom: 0px;
+}
+
+.MarketingContainer .MarketingImg {
+  /* position: relative; */
+  object-fit: cover;
+  border-radius: 30px;
+  width: 85%;
+  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  height: 450px;
+  filter: brightness(75%);
+}
+
+.MarketingContainer .GlyphsImg {
+  position: relative;
+  bottom: 100px;
+  border-radius: 15px;
+  height: 195px;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+.Marketbtn {
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    margin: auto;
+    position: relative;
+    bottom: 130px;
+}
+.Marketbtn button{
+    background-color: #c81c50;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+   
+}
+.subHeader{
+    display: flex;
+    width: 73%;
+   justify-content: flex-start;
+    margin: auto;
+    height: 50px;
+}
+.descriptionSection {
+  background-color: rgb(142, 188, 220);
+  width: 65%;
+  padding: 15px;
+  margin: 0px 14px;
+}
+.cardSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.cardSection img {
+  height: 151px;
+  margin: 13px 0px;
+  object-fit: cover;
+  width: 31%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.offerSection {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.offerCards {
+  width: 31.5%;
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: rgb(143, 188, 219);
+}
+
+.offerCards {
+  color: white;
+}
+
+iframe {
+  overflow: hidden;
+  background: none;
+  height: 420px;
+  width: 89%;
+  display: flex;
+  margin: auto;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.marketingContainerSection {
+  display: flex;
+  justify-content: space-evenly;
+}
+.workHoursSection {
+  background-color: #8ebcdc;
+  display: flex;
+  width: 89% !important;
+  padding: 10px;
+}
+.workHoursRight p {
+  padding-left: 25px;
+}
+.workHoursSection p {
+  font-size: 12px;
+  color: white;
+  margin: 0px;
+}
+
+.workHoursSection i {
+  margin: 5px;
+}
+.mapButton {
+  display: flex;
+  justify-content: end;
+}
+
+.mapButton button {
+  background-color: #c81c50;
+  padding: 9px;
+  font-size: 13px;
+  color: white;
+}
+.workHoursLeft {
+  display: flex;
+}
+.workHoursStatus {
+  font-size: 12px;
+  color: green;
+  background-color: white;
+  padding: 5px;
+  height: 26px;
+}
+.socialMediaIcon {
+  display: flex;
+  justify-content: space-between;
+}
+.socialMediaSection i {
+  color: #c81c50;
+  font-size: 34px;
+}
+.rightCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.rightCards img {
+  margin: 4px 0px;
+  object-fit: cover;
+  width: 30%;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.galleryTitle {
+  padding: 10px;
+  background-color: rgb(143, 188, 219);
+  border-radius: 10px;
+  padding: 8px;
+  width: 38%;
+  text-align: center;
+  color: white;
+}
+.galleryTitleDiv {
+  padding: 5px 10px;
+}
+
+.galleryTitleDiv p {
+  margin: 0;
+}
+.lastSection {
+  display: flex;
+  justify-content: center;
+}
+
+.lastSection img {
+  height: 220px;
+  width: 33%;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0px 10px;
+  filter: brightness(75%);
+}
+
+.subLastSection {
+  margin: auto;
+  padding: 30px 10px;
+}
+.mainSection {
+  background-image: url("../Images/marketProfile/bottomServiceBackground.png");
+  width: 100%;
+  background-size: cover;
+  margin: 0 !important;
+}
+h2 {
+  color: #153866;
+}

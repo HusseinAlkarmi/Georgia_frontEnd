@@ -1,21 +1,26 @@
 import React from "react";
 import LeftImage from "./LeftImage";
 import RightInfo from "./RightInfo";
+import style from './profile.module.css';
 
-function profileInfo(){
+
+function profileInfo({setShowFavourite, setShowSave}){
 
 
 
     return(
         <>
-        <div className="container">
+        <div className={style.mainProfile}>
+             <div className={`container pt-5`}>
 
-            <div className="row justify-content-center mt-5">
-                <LeftImage/>
-                <RightInfo/>
+                <div className="row justify-content-center">
+                    <LeftImage setShowFavourite = {setShowFavourite} setShowSave = {setShowSave}/>
+                    <RightInfo/>
+                </div>
+
             </div>
-
         </div>
+       
         </>
     );
 }

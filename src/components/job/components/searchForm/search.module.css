@@ -46,16 +46,21 @@
 
 .job_btn{
     padding: 12px 0;
-    background: #CACACA;
-    color: white;
+    background: #CE1B50 !important;
+    color: white !important;
+    height: 48px;
 }
 
 .job_btn:hover{
     padding: 12px 0;
-    background: #A8A8A8;
+    background: #2D74B4 !important;
     color: white;
 }
 
 .form_m{
     margin: 5px auto;
+}
+
+.paddingForm{
+    padding: 0 31px;
 }

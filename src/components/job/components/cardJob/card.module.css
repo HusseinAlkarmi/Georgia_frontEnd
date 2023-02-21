@@ -1,5 +1,5 @@
 .btn_post{
-    background: #EE9C1F;
+    background: #CE1B50;
     color: white;
     font-size: 15px;
     padding: 5px 5px;
@@ -7,11 +7,12 @@
 }
 
 .btn_post:hover{
-    background: orange;
+    background: #2D74B4;
 }
 .post_row{
     width: 100%;
-    padding: 10px 22px;
+    padding: 10px 50px;
+    margin: 0 !important;
 }
 
 .icon_row{
@@ -40,7 +41,7 @@
 }
 
 .main_card_section{
-    margin: 0 0 30px 0;
+    margin: 0 !important;
     padding: 10px 50px;
     justify-content: space-evenly;
     width: 100%;
@@ -65,4 +66,27 @@
 }
 .card_footer p{ 
     margin: 0; 
+}
+
+.rentCard{
+    max-width: 350px;
+    min-width: 310px;
+    height: 370px;
+    margin: 15px auto;
+    background: white;
+}
+
+.rentCardImg{
+    height: 215px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.rentCardInfo{
+    padding: 10px;
+
+}
+
+.rentCardBottomIcon{
+    padding: 0 10px;
 }

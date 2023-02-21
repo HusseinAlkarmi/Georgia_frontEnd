@@ -11,6 +11,10 @@ import Job from "./homeComponents/jobs/Jobs";
 
 function Home() {
 
+    const handleChangePage = () => {
+        window.scrollTo(0, 0);
+      }
+
     return(
         <>
         <Hero/>
@@ -18,7 +22,7 @@ function Home() {
         <CategoryList/>
         <TryApp/>
         <Blog/>
-        <Job/>
+        <Job handleChangePage = {handleChangePage}/>
         </>
 
     );

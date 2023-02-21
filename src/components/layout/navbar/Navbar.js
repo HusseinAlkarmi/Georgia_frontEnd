@@ -9,8 +9,10 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import logo from './images/logo.png'
 import style from './navBar.module.css'
 import "./navbar.css";
+import Dropdown from 'react-bootstrap/Dropdown';
 
-// import Modal from "./login/Modal"
+
+import Modal from "../../login_register/Modal";
 
 
 function Navbar() {
@@ -28,6 +30,8 @@ function Navbar() {
         document.getElementById('root').style.direction = 'ltr'; 
     }
 
+    localStorage.setItem("lang", "en");
+    
     const [showModalLogin, setShowModalLogin] = useState(false);
 
     const handleOpenModalLogin = () => {
@@ -49,7 +53,7 @@ function Navbar() {
 
     window.addEventListener('scroll',changeBackground);
 
-    const handleClick = () => {
+    const handleChangePage = () => {
         window.scrollTo(0, 0);
       }
 
@@ -62,12 +66,12 @@ function Navbar() {
 
                 <ul className={ Mobile ?  'nav-links-mobile' : (navbar ? `${style.navLinks} ${style.activeNavLinks}` : `${style.navLinks}`)}>
                     <li></li>
-                    <Link to="/" className={style.navLink} onClick={handleClick}><li> {t('Home')}</li></Link>
-                    <Link to="/Blog" className={style.navLink} onClick={handleClick}><li>{t('Blog')}</li></Link>
-                    <Link to="/Service" className={style.navLink} onClick={handleClick}><li>{t('Service')}</li></Link>
-                    <Link to="/ReachOut" className={style.navLink} onClick={handleClick}><li>{t('Reachout')}</li></Link>
-                    <Link to="/AboutUs" className={style.navLink} onClick={handleClick}><li>{t('about us')}</li></Link>
-                    <Link to="/Jobs" className={style.navLink} onClick={handleClick}><li>{t('Job')}</li></Link>
+                    <Link to="/" className={style.navLink} onClick={handleChangePage}><li> {t('Home')}</li></Link>
+                    <Link to="/Blog" className={style.navLink} onClick={handleChangePage}><li>{t('Blog')}</li></Link>
+                    <Link to="/Service" className={style.navLink} onClick={handleChangePage}><li>{t('Service')}</li></Link>
+                    <Link to="/ReachOut" className={style.navLink} onClick={handleChangePage}><li>{t('Reachout')}</li></Link>
+                    <Link to="/AboutUs" className={style.navLink} onClick={handleChangePage}><li>{t('about us')}</li></Link>
+                    <Link to="/Jobs" className={style.navLink} onClick={handleChangePage}><li>{t('Job')}</li></Link>
                     <div className={style.buttonDiv}>
                        
                         {/* <li><button onClick={handleOpenModalLogin}><GiPadlock/>{t('login')}</button></li> */}
@@ -77,7 +81,17 @@ function Navbar() {
                         {i18n.language === 'ar' && <button onClick={()=> {i18n.changeLanguage('en'); ltrDir()}}><i className="fas fa-globe"></i> EN</button> }
                         </li>
 
-                        <Link to="/Profile" style={{background:"transparent"}}><li><button><FontAwesomeIcon icon={faUser} /> Welcome,  {userName}</button></li></Link>
+                        <Dropdown>
+                            <Dropdown.Toggle className={style.dropDown}  id="dropdown-autoclose-true">
+                            <li><FontAwesomeIcon icon={faUser} /> Welcome,  {userName}</li>
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item href="/Profile"><FontAwesomeIcon icon={faUser} /> Profile</Dropdown.Item>
+                                <Dropdown.Item onClick={handleOpenModalLogin}><i className="fas fa-sign-in-alt"></i> Login</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+                        {/* <Link to="/Profile" style={{background:"transparent"}}><li><button><FontAwesomeIcon icon={faUser} /> Welcome,  {userName}</button></li></Link> */}
                        
                     </div>
 
@@ -95,7 +109,7 @@ function Navbar() {
                 <div className={`closeModalDiv`}>
                 <button className={`closeBtnModal`} onClick={handleCloseModalLogin}><i className="fas fa-times"></i></button>
                 </div>
-                {/* <Modal userNameHandler = {setUserName}/> */}
+                <Modal userNameHandler = {setUserName}/>
               </div>
 
       )}

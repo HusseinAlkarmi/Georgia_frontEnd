@@ -6,7 +6,7 @@
 }
 
 .jobBody{
-    background: #ADCCCE;
+    background: #C1E0F2;
 }
 
 .slider_ul{
@@ -16,7 +16,7 @@
     padding: 0;
     cursor: grab;
     flex-wrap: nowrap;
-    width: 92%;
+    width: 60%;
     position: relative;
     margin: 0 auto;
     /* left: 3%; */
@@ -53,6 +53,15 @@
     background: orange;
 }
 
+.active{
+    background: #2D74B4;
+    color: white !important;
+}
+.active p{
+    background: #2D74B4;
+    color: white !important;
+}
+
 /* .slider_ul::-webkit-scrollbar{
     display: none;
   } */
@@ -60,11 +69,15 @@
   .width_slider{
       width: 92%;
         position: relative;
-        left: 3%;
+        margin: auto;
   }
 
 .nav_body{
     text-align: center;
+  }
+
+  .navLink{
+    text-decoration: none;
   }
 
   @media (max-width:600px){

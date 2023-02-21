@@ -191,6 +191,7 @@ button{
     z-index: 999;
     width: 62%;
     text-align: end;
+    top: 10px;
 }
 
 .closeBtnModal{
