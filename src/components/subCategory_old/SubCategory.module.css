@@ -1,0 +1,118 @@
+
+
+.subCategoryMainDiv{
+    background-color: rgb(173,207,234);
+}
+
+
+.categoryContainer{
+display: flex;
+position: relative;
+justify-content: center;
+align-items: center;
+background-image: url("./Images/headSubCategoryBackground.png");
+width: 100%;
+object-fit: contain;
+padding: 50px 0px;
+}
+.categoryContainer img{
+position: relative;
+filter: brightness(66%);
+object-fit: cover;
+border-radius: 30px;
+width: 80%;
+height: 450px;
+
+}
+.categoryContainer h1 {
+    position: absolute;
+    color: white;
+}
+
+iframe{
+    overflow:hidden;
+    background:none;
+    height:550px;
+    width:95%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.categoryTitle{
+padding-left: 160px;
+padding-top: 55px;
+}
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 62%;
+}
+
+.card{
+margin: 10px;
+text-align: center;
+border-radius: 17px;
+width: 28%;
+}
+.card img{
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.card p{
+    background-color: rgb(203,226,244);
+    padding: 15px;
+    border-radius: bottom 47px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.categoryBody{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+.searchField input {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    width: 30%;
+  }
+ .dealsContainer{
+   display: flex;
+   justify-content: center;
+   /* padding-top: 54px; */
+   padding:50px 0px;
+  }
+ .dealsCard{
+    margin: 10px;
+    text-align: center;
+    border-radius: 27px;
+    width: 20%;
+    background-color: rgb(171,205,232);
+     
+ }
+ .dealsCard img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 25px;
+    filter: brightness(70%);
+    height: 279px;
+
+ }
+ .dealsCard p{
+   padding: 20px;
+   border-bottom-left-radius: 30px;
+   border-bottom-right-radius: 30px;
+
+ }
+ .firstContainer{
+    position: relative;
+    background-image: url('./Images/dealsSubCategoryBackground.png');
+
+ }
+ .dealsTitle{
+    color:black;
+    position: absolute;
+    left: 288px;
+ }

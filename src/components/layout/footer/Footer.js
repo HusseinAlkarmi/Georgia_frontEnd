@@ -1,9 +1,10 @@
 import React from "react";
-import style from './footer.module.css';
+import style from '../../../assets/style/footer.module.css';
 import LeftFooter from './LeftFooter';
 import MiddleFooter from "./MiddleFooter";
 import RightFooter from "./RightFooter";
 import BottomFooter from "./BottomFooter";
+import RightLogo from "./RightLogo";
 
 
 function Footer(){
@@ -15,6 +16,7 @@ function Footer(){
                 <LeftFooter/>
                 <MiddleFooter/>
                 <RightFooter/>
+                <RightLogo/>
                 
             </div>
 

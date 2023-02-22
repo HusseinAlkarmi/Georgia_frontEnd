@@ -21,7 +21,7 @@ function Modal(props){
         <>
          {showModalLogin && (
               <div>
-                <Login regesterBtn="handleCloseModal" userNameHandler = {props.userNameHandler}/>
+                <Login handleCloseModalLogin = {props.handleCloseModalLogin} setIsLogedIn = {props.setIsLogedIn} setUserName = {props.setUserName} regesterBtn="handleCloseModal" />
               </div>
 
       )}

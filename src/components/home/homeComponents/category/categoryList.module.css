@@ -67,3 +67,7 @@ margin: 20px auto;
     font-weight: 700;
     margin-top: 10px;
 }
+
+.navLink{
+    text-decoration: none;
+}

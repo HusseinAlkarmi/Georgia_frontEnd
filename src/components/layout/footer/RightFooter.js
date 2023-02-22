@@ -1,11 +1,11 @@
 import React from "react";
-import style from './footer.module.css';
+import style from '../../../assets/style/footer.module.css';
 
 
 function RightFooter(){
     return(
         <>
-        <div className={`col-sm-12 col-md-6 col-lg-3 ${style.rightDiv}`}>
+        <div className={`col-sm-12 col-md-6 col-lg-3 ${style.contactFooter}`}>
             <h2 className={style.rightTitle}>Contact Info</h2>
 
             <ul className={style.rightUl}>

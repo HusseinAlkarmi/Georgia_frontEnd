@@ -10,7 +10,7 @@
     position: fixed;
     width: 100%;
     background: transparent;
-    background: rgba(0, 0, 0, 0.5);;
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -24,7 +24,7 @@
 
 .profileCard{
     padding: 20px;
-    background-image: url('./images/loginBackground.jpg');
+    background-image: url('./images/loginBackground.png');
     background-size: cover;
     background-repeat:no-repeat; 
     min-width: 400px;

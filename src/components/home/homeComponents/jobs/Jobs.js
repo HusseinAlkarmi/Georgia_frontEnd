@@ -21,7 +21,7 @@ function Jobs({handleChangePage}) {
            
             <div className={`row ${style.mainJobDiv}`}>
                 <div className={`col-sm-12 col-md-6 ${style.colCenter}`} >
-                    <Link to="/Jobs/Rent"  onClick={handleChangePage} className={style.navLink}>
+                    <Link to="/Jobs/Job"  onClick={handleChangePage} className={style.navLink}>
                         <div className={style.jobCard} onClick={() => handleJobClick('job')}>
                             <img className="" height={350} src={require('../../images/rent.png')} alt="Card image cap"/>
                             <div className="">

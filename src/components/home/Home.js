@@ -20,9 +20,9 @@ function Home() {
         <Hero/>
         <About/>
         <CategoryList/>
-        <TryApp/>
-        <Blog/>
         <Job handleChangePage = {handleChangePage}/>
+        <Blog/>
+        <TryApp/>
         </>
 
     );

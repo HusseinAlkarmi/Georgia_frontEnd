@@ -1,11 +1,11 @@
 import React from "react";
-import style from './footer.module.css';
+import style from '../../../assets/style/footer.module.css';
 
 
 function MiddleFooter(){
     return(
         <>
-        <div className={`col-sm-12 col-md-6 col-lg-2`}>
+        <div className={`col-sm-12 col-md-6 col-lg-2 ${style.serviceFooter}`}>
             <h2 className={style.midTitle}>Services</h2>
 
             <ul className={style.midUl}>

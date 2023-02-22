@@ -47,9 +47,11 @@ function Login(props){
             // console.log(response.data.data.token);
             var name = response.data.data.user.name;
             var tok = response.data.data.token;
-            // var name = 'test2';
-            // console.log(userName);
-            props.userNameHandler(name);
+
+            props.setUserName(name);
+            localStorage.setItem("userToken", tok);
+            props.setIsLogedIn(true);
+            props.handleCloseModalLogin();
             
             setSession({userName: name, isLoggedIn: true, token: tok});
 

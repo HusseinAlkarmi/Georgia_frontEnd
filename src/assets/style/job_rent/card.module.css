@@ -1,0 +1,243 @@
+.btn_post{
+    background: #CE1B50;
+    color: white;
+    font-size: 15px;
+    padding: 5px 5px;
+    border-radius: 10px;
+}
+
+.btn_post:hover{
+    background: #2D74B4;
+}
+.post_row{
+    width: 100%;
+    padding: 10px 50px;
+    margin: 0 !important;
+}
+
+.icon_row{
+    justify-content: end;
+
+}
+
+.icon_row i{
+    margin: 1px 5px;
+}
+
+.card_body{
+    cursor: pointer;
+    padding:10px 0px;
+    background: white;
+    /* width: 32%; */
+    margin: 10px 0;
+    max-width: 440px;
+    min-width: 290px;
+    margin: 10px auto;
+}
+
+.card_img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.main_card_section{
+    margin: 0 !important;
+    padding: 10px 50px;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.place i{
+    line-height: 1.8;
+    padding: 0 7px 0 0;
+}
+
+.title h4{
+     margin: 0;
+}
+
+.card_content{
+    padding: 0 25px;
+    margin-bottom: 10px !important;
+}
+
+.card_footer{
+    padding: 0 25px; 
+}
+.card_footer p{ 
+    margin: 0; 
+}
+
+.rentCard{
+    max-width: 350px;
+    min-width: 310px;
+    height: 370px;
+    margin: 15px auto;
+    background: white;
+    cursor: pointer;
+}
+
+.rentCardImg{
+    height: 215px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.rentCardInfo{
+    padding: 10px;
+
+}
+
+.rentCardBottomIcon{
+    padding: 0 10px;
+}
+
+.modalSection{
+    position: fixed;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.closeModalDiv{
+    position: fixed;
+    z-index: 999;
+    width: 83%;
+    text-align: end;
+    top: 18px;
+    
+}
+
+.closeModalBtn{
+    font-size: 30px;
+}
+
+.closeBtnModal{
+    position: relative;
+}
+
+.popRentCard{
+    background: #FFFFFF;
+    width: 75%;
+    margin: 10px auto 0;
+}
+
+.popRentMainImage{
+    display: flex;
+}
+.popRentMainImage img{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.popRentSubImage{
+    display: flex;
+    justify-content: center;
+}
+.popRentSubImage img{
+    padding: 10px;
+    height: 200px;
+    width: 285px;
+}
+
+.popRentDiscr{
+    padding: 0 25px;
+}
+
+.popRentTitle{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+}
+
+.popRentTitle h1{
+    font-size: 25px;
+}
+.popRentIcon{
+    font-size: 30px;
+    padding: 0 15px;
+}
+
+.popRentSubDisc p{
+    margin: 0;
+}
+
+.popRentLongDisc{
+    padding: 3px 10px;
+    font-size: 13px;
+    height: 100px;
+    width: 75%;
+    overflow: auto;
+}
+
+.popRentContact p{
+    margin: 0;
+    font-size: 13px;
+}
+
+.popRentContact{
+    position: relative;
+    bottom: 40px;
+}
+
+.popRentContact h3{
+    background: #D21A4E;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+}
+
+.popJobCard{
+    background: #E3F5FF;
+    width: 73%;
+    margin: 15px auto;
+    padding: 30px;
+}
+
+.popJobMainImage{
+    display: flex;
+}
+
+.popJobMainImage img{
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.popJobHeadInfo{
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.popJobHeadInfo p{
+    margin: 4px;
+}
+
+.popJobLongDisc{
+    padding: 15px;
+}
+.popJobLongDisc p{ 
+    margin: 0;
+}
+
+.popJobContactSection{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.popJobContactSection h3{
+    background: #D21A4E;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 7px auto;
+}

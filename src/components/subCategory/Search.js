@@ -1,14 +1,15 @@
 import { React } from "react";
-import style from './SubCategory.module.css';
+import style from "../../assets/style/SubCategory.module.css";
 
 function Search(props) {
   return (
     <div className={style.searchField}>
+      <i className={`fas fa-search ${style.searchIcon}`}></i>
       <input
         type="search"
-        placeholder="Search"
+        placeholder="What are you looking for..."
         onChange={props.handleChange}
-        value={props.searchField}
+        // value={props.searchField}
       />
     </div>
   );
