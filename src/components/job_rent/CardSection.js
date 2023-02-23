@@ -5,14 +5,16 @@ import RentCard from "./RentCard"
 import {useState} from "react";
 import PopUpRent from './PopUpRent';
 import PopUpJob from './PopUpJob';
-
 import useFetch from "../../hooks/useFetch";
+import JobForm from "./Post_Form/JobForm";
+import RentForm from "./Post_Form/RentForm"; 
 
 function CardSection({index, showModal, setShowModal, rentPopUp, jobPopUp, setJobPopUp, setRentPopUp}){
     
     const [popRentInfo, setPopRentInfo] = useState({id: 0, name: ''});
     const [popJobInfo, setPopJobInfo] = useState({id: 0, name: ''});
-    
+    const [jobForm , setJobFormOpen] = useState(false);
+    const [rentForm , setRentOpen] = useState(false);
 
     const[Data] = useFetch('https://jsonplaceholder.typicode.com/users');
 
@@ -24,13 +26,28 @@ function CardSection({index, showModal, setShowModal, rentPopUp, jobPopUp, setJo
       setJobPopUp(false);
       setShowModal(false);
     }
+      const handleOpenModalForm = () => {
+        document.body.style.overflow = "hidden";
+        setJobFormOpen(true);
+      };
+    
+      const handleOpenRentModal =() =>{
+        document.body.style.overflow = "hidden";
+        setRentOpen(true);
+      }
+    
     return(
 
         <>
         <div className="">
             <div className={`row d-flex justify-content-end ${style.post_row}`}>  
                 <div className="col-lg-2 col-md-2 col-sm-6">
-                  <button className={`w-100 ${style.btn_post}`}>Post a job</button>
+                {index === "Job" ?  
+                  <button className={`w-100 ${style.btn_post}`} onClick={handleOpenModalForm}>Post a job</button> : 
+                  <button className={`w-100 ${style.btn_post}`} onClick={handleOpenRentModal}>Post for rent</button>
+                 }
+                  {jobForm && <JobForm setJobFormOpen={setJobFormOpen} /> }
+                  {rentForm && <RentForm setRentOpen={setRentOpen} /> }
                 </div>
             </div>
 

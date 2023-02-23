@@ -29,7 +29,7 @@ function Job(){
 
         <div className={style.jobBody}>
         <SubNav index = {index} setIndex = {setIndex}  setJobPopUp={setJobPopUp} setRentPopUp={setRentPopUp}/>
-        {index === "Rent"? <SearchForm/>: <SearchFormRent/>}
+        {index === "Rent"? <SearchFormRent/>: <SearchForm/>}
         {/* {index == "Rent"? <CardSection index = {index}/>: <CardSection index = {index}/>} */}
         <CardSection index = {index} showModal = {showModal} setShowModal = {setShowModal} rentPopUp={rentPopUp} jobPopUp = {jobPopUp} setJobPopUp={setJobPopUp} setRentPopUp={setRentPopUp}/>
              

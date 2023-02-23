@@ -1,3 +1,18 @@
+.formDiv{
+  display: flex;
+  justify-content: center;
+  width: 100% !important;
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+}
+
+
 .form {
     display: flex;
     flex-direction: column;
@@ -7,6 +22,13 @@
     padding: 20px;
     border-radius: 5px;
     background-color: #e3f5ff;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    justify-content: center;
+   
   }
   
   label {
@@ -46,17 +68,17 @@ width: 70%;
 }
 
 
-.typeDiv{
+.mainDiv{
     display: flex;
     
 }
 
-.selectWidth{
+.fieldWidth{
     width:100%;
     
 }
 
-.typeDivSelect{
+.subDiv{
     display: flex;
     flex-direction: column;
     width: 35%;
@@ -65,3 +87,15 @@ width: 70%;
 .textAreaHeight{
     height: 100px;
 }
+
+.closeBtnForm{
+position: fixed;
+z-index: 4;
+}
+.btnCloseDiv{
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  padding: 12px;
+}
+

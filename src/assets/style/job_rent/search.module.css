@@ -42,6 +42,8 @@
     /* padding: 15px 7% !important; */
     justify-content: space-around;
     display: flex;
+    flex-direction: column;
+    padding: 0 50px;
 }
 
 .job_btn{
@@ -63,4 +65,26 @@
 
 .paddingForm{
     padding: 0 31px;
+}
+
+.filterRent{
+    background: white;
+    border: none;
+    color: #757575;
+    font-weight: 500;
+}
+
+.divSelectRent select{
+    width: 100%;
+    background: white;
+    height: 45px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.rentLabel{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #2A75B5;
+    font-weight: 700;
 }

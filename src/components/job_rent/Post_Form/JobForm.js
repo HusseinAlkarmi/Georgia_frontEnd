@@ -1,13 +1,25 @@
 import React, { useState } from "react";
-import style from "../../assets/style/form.module.css";
+import style from "../../../assets/style/postJob_rent.module.css";
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-};
+function JobForm({ setJobFormOpen }) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
 
-function JobForm() {
+
+  const handleOpenModalForm = () => {
+    document.body.style.overflow = "auto";
+    setJobFormOpen(false);
+  };
+    
   return (
-    <form className={style.form} onSubmit={handleSubmit}>
+    <div className={style.formDiv}>
+      <div className={style.btnCloseDiv}>
+      <button className={style.closeBtnForm} onClick={handleOpenModalForm}>
+              <i className="fas fa-times"></i>
+       </button>
+      </div>
+    <form className={style.form} onSubmit={handleSubmit} >
       <label htmlFor="name">Name</label>
       <input type="text" id="name" />
 
@@ -17,7 +29,7 @@ function JobForm() {
       <label htmlFor="jobTitle">Job Title</label>
       <div className={style.requiredClass}>
         <input type="text" id="jobTitle" required />
-        <span class="req">*</span>
+        <span className="req">*</span>
       </div>
 
       <label htmlFor="jobTitle">Job Type</label>
@@ -33,7 +45,7 @@ function JobForm() {
       <label htmlFor="phoneNumber">Phone Number</label>
       <div className={style.requiredClass}>
         <input type="tel" id="phoneNumber" required />
-        <span class="req">*</span>
+        <span className="req">*</span>
       </div>
 
       <label htmlFor="email">Email</label>
@@ -47,6 +59,7 @@ function JobForm() {
         </button>
       </div>
     </form>
+    </div>
   );
 }
 
