@@ -1,5 +1,5 @@
 .blogPageStyle {
-  background-color: #c3e0f2; 
+  background-color: #B0D2EA; 
   /* background-image: url('../Images/blog/firstBlogPageBackground.png'); */
 }
 
@@ -35,7 +35,8 @@
 .blogCardContainer {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 100px;
+  /* padding-top: 100px; */
+  padding-top: 0px;
 }
 .cardImg {
   display: flex;
@@ -221,4 +222,22 @@ height:30px;
   display: flex;
   justify-content: flex-end;
   padding: 0px 120px;
+}
+
+.blogLetterPaddingTop{
+  padding-top: 80px !important;
+}
+
+.firstConBackground{
+  background-image: url('../Images/blog/firstBlogCon.png');
+  background-size: contain;
+}
+
+.secondConBackground{
+  background: #E3F6FF;
+}
+
+.lastConBackground{
+  background-image: url('../Images/blog/lastBlogCon.png');
+  background-size: cover;
 }

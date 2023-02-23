@@ -23,22 +23,76 @@ function BlogPage() {
   // window.addEventListener('scroll',changePosition);
 
   return (
+    // <div className={style.blogPageStyle}>
+    //   <BlogHeader />
+    //   <div className={`container`}>
+
+    //     <div className="row">
+    //       <div className={`col-lg-7 col-md-12 col-sm-12 pt-4 `}>
+    //         <BlogLetter />
+    //         <BlogCards />
+    //         <ColumnCards />
+    //       </div>
+    //       {/* <div className={`col-lg-5 col-md-12 col-sm-12 pt-4 ${rightFixed ? style.rightSectionFixed : `` }` }> */}
+    //       <div className={`col-lg-5 col-md-12 col-sm-12 pt-4`}>
+    //         <BlogSearch />
+    //         <div className={` pt-3`}>
+    //           <EventCards />
+    //           <Tags />
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <ScrollButton />
+
+    //   <div className={`${style.lastSectionContainer} pt-5`}>
+    //     <LastCard />
+    //   </div>
+    // </div>
+
     <div className={style.blogPageStyle}>
       <BlogHeader />
+
+      <div className={`${style.firstConBackground}`}>
+        <div className={`container`}>
+          <div className="row">
+            <div
+              className={`col-lg-7 col-md-12 col-sm-12 ${style.blogLetterPaddingTop}`}
+            >
+              <BlogLetter />
+            </div>
+
+            {/* <div className={`col-lg-5 col-md-12 col-sm-12 pt-4 ${rightFixed ? style.rightSectionFixed : `` }` }> */}
+            <div className={`col-lg-5 col-md-12 col-sm-12 pt-4`}>
+              <BlogSearch />
+              <div className={` pt-3`}>
+                <EventCards />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className={`${style.secondConBackground}`}>
+      <div className={`container`}>
+        <div className="row">
+          <div className={`col-lg-7 col-md-12 col-sm-12`}>
+            <BlogCards />
+          </div>
+
+          {/* <div className={`col-lg-5 col-md-12 col-sm-12 pt-4 ${rightFixed ? style.rightSectionFixed : `` }` }> */}
+          <div className={`col-lg-5 col-md-12 col-sm-12 pt-3`}>
+            <Tags />
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div className={`${style.lastConBackground}`}>
       <div className={`container`}>
         <div className="row">
           <div className={`col-lg-7 col-md-12 col-sm-12 pt-4 `}>
-            <BlogLetter />
-            <BlogCards />
             <ColumnCards />
-          </div>
-          {/* <div className={`col-lg-5 col-md-12 col-sm-12 pt-4 ${rightFixed ? style.rightSectionFixed : `` }` }> */}
-          <div className={`col-lg-5 col-md-12 col-sm-12 pt-4`}>
-            <BlogSearch />
-            <div className={` pt-3`}>
-              <EventCards />
-              <Tags />
-            </div>
           </div>
         </div>
       </div>
@@ -48,6 +102,8 @@ function BlogPage() {
         <LastCard />
       </div>
     </div>
+    </div>
+
   );
 }
 export default BlogPage;
