@@ -1,0 +1,224 @@
+.blogPageStyle {
+  background-color: #c3e0f2; 
+  /* background-image: url('../Images/blog/firstBlogPageBackground.png'); */
+}
+
+.blogContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  object-fit: contain;
+  flex-direction: column;
+}
+.blogContainer img {
+  filter: brightness(50%);
+  object-fit: cover;
+  border-radius: 30px;
+  width: 84%;
+  height: 450px;
+}
+.blogContainer h1 {
+  color: white;
+  position: absolute;
+}
+
+.blogLetterContainer {
+  display: flex;
+}
+.imageBlogDiv img {
+  width: 90%;
+  object-fit: cover;
+  height: 230px;
+  border-radius: 10px;
+}
+.blogCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+}
+.cardImg {
+  display: flex;
+  justify-content: center;
+}
+.cardImg img {
+  width: 100%;
+  border-radius: 12px;
+}
+.secondCardDiv {
+  background-color: white;
+  margin: 10px;
+  width: 45%;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.columnCardsContainer {
+  padding-top: 100px;
+}
+
+.paragraph {
+  width: 65%;
+}
+.paragraph p {
+  padding: 5px 10px;
+  margin: 5px;
+}
+.cardButton button {
+  background-color: #c81c50;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+.cardButton {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 46px;
+}
+.secondColCardDiv {
+  display: flex;
+  width: 100%;
+  margin: 10px;
+}
+
+.rightCardImg img {
+  border-radius: 12px;
+  padding: 0px;
+  margin: 0;
+
+  height: 85px;
+}
+
+.colCardImg img {
+  border-radius: 12px;
+  padding: 0px;
+  margin: 0px;
+
+  width: 100%;
+}
+.colCardImg {
+  text-align: center;
+}
+.eventColCardDiv{
+  display: flex;
+  width: 100%;
+  margin: auto !important;
+}
+.leftEventext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blogSearchField {
+  position: relative;
+  /* padding: 0px 20px; */
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+}
+.blogSearchField input {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 55px;
+  width: 100%;
+}
+
+.searchIcon {
+  -webkit-transform: scaleX(-1);
+  color: grey;
+  position: absolute;
+  top: 18px;
+  /* margin: 0px 15px; */
+  left: 10px;
+  /* right: auto; */
+}
+.searchContainer {
+  background-color: white;
+  width: 97%;
+  padding: 14px 5px;
+  border-radius: 20px;
+}
+
+.searchContainer p {
+  margin: 10px 10%;
+}
+
+.eventContainer {
+  background-color: #6a97be;
+  border-radius: 25px;
+  padding: 15px;
+}
+.horizontalRule {
+  border: 3px solid black;
+  border-radius: 5px;
+  opacity: 1;
+  background-color: black;
+}
+
+.tagDiv {
+  background-color: #7e9cc7;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 9px;
+}
+.lastCardContainer {
+  display: flex;
+  background-color: #7e9cc7;
+  padding: 10px;
+  justify-content: center;
+  width: 85%;
+  border-radius: 14px;
+  flex-direction: column;
+}
+.cardSectionRow {
+  display: flex;
+  justify-content: center;
+}
+
+.lastCardImg {
+  display: flex;
+  justify-content: center;
+}
+.lastCardImg img {
+  width: 100%;
+  border-radius: 12px;
+}
+.lastCardDiv {
+  background-color: white;
+  margin: 10px;
+  border-radius: 12px;
+  padding: 10px;
+  width: 20%;
+}
+
+.lastSectionContainer {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+}
+.rightSectionFixed {
+  bottom: 0px;
+  right: 0px;
+  position: fixed;
+}
+
+.mainCardBackground{
+  background-image: url('../Images/blog/firstBlogPageBackground.png');
+  width:100%;
+}
+
+
+.scrollToTop{
+  border-radius: 50%;
+  background-color: grey;
+  width: 30px;
+height:30px;
+}
+.mainScrollButton{
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 120px;
+}

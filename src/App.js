@@ -7,6 +7,7 @@ import Footer from "./components/layout/footer/Footer";
 import UserProfile from './pages/UserProfile';
 import MarketProfile from './pages/MarketProfile';
 import SubCategory from './pages/SubCategory';
+import Blog from './pages/Blog';
 
 function App() {
   return (
@@ -21,8 +22,8 @@ function App() {
             <Route path="/Jobs/:type" element={<Jobs/>} exact /> 
             <Route path="/Category/:id" element={<SubCategory />} exact />
             <Route path="/MarketProfile" element={<MarketProfile />} exact />
-
-            {/* <Route path="/Blog" element={<Blog />} exact />
+            <Route path="/Blog" element={<Blog />} exact />
+            {/*
             <Route path="/Service" element={<Service />} exact />
             <Route path="/ReachOut" element={<Reachout />} exact />
             <Route path="/AboutUs" element={<About />} exact />

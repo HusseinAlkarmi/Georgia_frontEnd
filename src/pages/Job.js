@@ -7,7 +7,7 @@ import CardSection from "../components/job_rent/CardSection";
 import style from '../assets/style/job_rent/jobNav.module.css';
 
 import { useParams } from "react-router-dom";
-import { useState , useEffect} from "react";
+import { useState } from "react";
 
 
 function Job(){
@@ -29,13 +29,10 @@ function Job(){
 
         <div className={style.jobBody}>
         <SubNav index = {index} setIndex = {setIndex}  setJobPopUp={setJobPopUp} setRentPopUp={setRentPopUp}/>
-        {index == "Rent"? <SearchForm/>: <SearchFormRent/>}
+        {index === "Rent"? <SearchForm/>: <SearchFormRent/>}
         {/* {index == "Rent"? <CardSection index = {index}/>: <CardSection index = {index}/>} */}
         <CardSection index = {index} showModal = {showModal} setShowModal = {setShowModal} rentPopUp={rentPopUp} jobPopUp = {jobPopUp} setJobPopUp={setJobPopUp} setRentPopUp={setRentPopUp}/>
              
-
-        
-     
         </div>
         </>
     );
