@@ -50,7 +50,7 @@ function SearchForm(){
                         />
                 </div>
                 <div className={`col-sm-6 col-md-2 col-lg-2 form-group  ${style.form_m}`}>
-                    <button className={`btn rounded-10 w-100 ${style.job_btn}`} type="submit" onClick={handleClick}>Saved Job</button>
+                    <button className={`btn rounded-10 w-100 ${style.job_btn}`} type="submit" onClick={handleClick}>Search</button>
                 </div>
            </div>
      

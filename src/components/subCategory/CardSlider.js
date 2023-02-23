@@ -3,23 +3,16 @@ import style from "../../assets/style/subCategorySlider.module.css";
 // import "../mainComponent/mainStyle.css";
 
 
-function SliderList(props){
-    const [activeInd, setActiveIndex] = useState(0);
-
-    const handleClick = (index) => {
-        console.log(index + " index");
-        setActiveIndex(index);
-        console.log(activeInd + " Active");
-      }
+function SliderList({id, name, handleClick, activeIndex}){
 
 
     return(
         <>
         {/* <li key="{key}">{props.text}</li> */}
-        <li  className={`${activeInd === props.id ? "Active" : ""}`} onClick={() => handleClick(props.id)}>
+        <li  className={`${activeIndex === id ? style.activeLi : ""}`} onClick={() => handleClick(id)}>
                 <div >
-                    <img className={style.subImg} src={require(`../../assets/Images/subCategory/${props.id}_li.png`)}/>
-                    <p className={style.subTitle}>{`${props.name} ${props.id}`}</p>
+                    <img className={style.subImg} src={require(`../../assets/Images/subCategory/${id}_icon.png`)}/>
+                    <p className={style.subTitle}>{`${name}`}</p>
                 </div>
         </li>
         </>

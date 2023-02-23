@@ -1,0 +1,67 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #e3f5ff;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select,
+  textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: white;
+   border: none;
+width: 70%;
+  }
+  
+  .formBtn {
+    background-color: #cf1c4c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .formBtnContainer{
+    display: flex;
+    justify-content: end;
+    padding: 0px 136px;
+    padding-top: 10px;
+  }
+
+  .requiredClass span {
+    color: red;
+    padding: 8px;
+}
+
+
+.typeDiv{
+    display: flex;
+    
+}
+
+.selectWidth{
+    width:100%;
+    
+}
+
+.typeDivSelect{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin: 0px 2px;
+}
+.textAreaHeight{
+    height: 100px;
+}

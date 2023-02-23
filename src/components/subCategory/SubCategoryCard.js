@@ -13,7 +13,7 @@ function SubCategoryCard(props) {
 
       <div className={style.cardContainer}>
         {categoryCards.map((item) => (
-          <div className={style.card}>
+          <div key={item.id} className={style.card}>
             <img src={require(`../../assets/Images/subCategory/category_img.png`)} />
             <p>{item.name}</p>
           </div>

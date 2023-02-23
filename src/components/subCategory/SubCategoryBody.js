@@ -21,7 +21,6 @@ function SubCategoryBody(props) {
           <Map />
         </div>
         <div className={`col-lg-8 col-md-12 col-sm-12`}>
-          <Search />
           <SubCategoryCard />
         </div>
       </div>

@@ -12,7 +12,7 @@ function DealsCard(props) {
 
       <div className={style.dealsContainer}>
         {dealsCards.map((item) => (
-          <div className={style.dealsCard}>
+          <div key={item.id} className={style.dealsCard}>
 
             <img
               src={require(`../../assets/Images/marketProfile/marketing.png`)}
