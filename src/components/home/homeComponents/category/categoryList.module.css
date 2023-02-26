@@ -14,7 +14,7 @@ margin: 20px auto;
 
 .cardBody{
     background: #5E96C5;
-    margin: 10px;
+    margin: 10px auto;
     height: 200px;
     border-radius: 15px; 
     position: relative;
@@ -27,6 +27,7 @@ margin: 20px auto;
     height: 100%;
     position: absolute;
     border-radius: 15px; 
+    object-fit: cover;
 
 }
 
@@ -65,7 +66,8 @@ margin: 20px auto;
 .categoryTitle{
     color: #215395;
     font-weight: 700;
-    margin-top: 10px;
+    margin-top: 15px;
+    padding-top: 20px;
 }
 
 .navLink{

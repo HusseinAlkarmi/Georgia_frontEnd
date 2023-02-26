@@ -2,8 +2,15 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import style from './categoryList.module.css'
 import CategoryCard from "./CategoryCard";
+import useAxios from "../../../../hooks/useAxios";
 
 function SampleNextArrow(props) {
+
+  // const [Data] = useAxios("en/main-categories");
+  //       const BlogCardsData = Data.data;
+  //       const BlogCards = BlogCardsData;
+  //       console.log(BlogCards);
+
     const { className, style, onClick } = props;
     return (
       <div
@@ -36,26 +43,36 @@ export default class AutoPlay extends Component {
 
 
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/users')
+
+        fetch('https://dashboard.allarabinusa.com/api/v1/en/main-categories')
         .then(response => response.json())
+        .then(data => data.data)
+        .then(data => data.service)
         .then(users => this.setState(
-          () => {
-            return {list: users}
-          }
-           )
-           );
+          () => { return {list: users}}
+           ));
+
+    
       }
 
 
   render() {
     const CardList = this.state.list.map(item =>  
-      <CategoryCard key={item.id} name = {item.name} id = {item.id}/>
+      <CategoryCard key={item.id} name = {item.name} id = {item.id} image = {item.image}/>
       )
+
+      let slidesToShowNum = Math.round(CardList.length / 1.5);
+            console.log(Math.round(CardList.length / 1.5));
+
+      if(slidesToShowNum > 6){
+        slidesToShowNum = 6;
+      }
+
 
     const settings = {
     //   dots: true,
       infinite: true,
-      slidesToShow: 6,
+      slidesToShow: slidesToShowNum,
       slidesToScroll: 1,
       autoplay: true,
       speed: 3000,

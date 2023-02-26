@@ -36,26 +36,41 @@ export default class AutoPlay extends Component {
 
 
     componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(users => this.setState(
-          () => {
-            return {list: users}
-          }
-           )
-           );
+      fetch('https://dashboard.allarabinusa.com/api/v1/en/main-categories')
+      .then(response => response.json())
+      .then(data => data.data)
+      .then(data => data.business)
+      .then(users => this.setState(
+        () => { return {list: users}}
+         ));
+
+        // fetch('https://jsonplaceholder.typicode.com/users')
+        // .then(response => response.json())
+        // .then(users => this.setState(
+        //   () => {
+        //     return {list: users}
+        //   }
+        //    )
+        //    );
       }
 
 
   render() {
     const CardList = this.state.list.map(item =>  
-      <CategoryCard key={item.id} name = {item.name} id = {item.id}/>
-      )
+      <CategoryCard key={item.id} name = {item.name} id = {item.id} image = {item.image}/>
+      );
+
+      const slidesToShowNum = Math.round(CardList.length / 1.5);
+      // console.log(Math.round(CardList.length / 1.5));
+      if(slidesToShowNum > 6){
+        slidesToShowNum = 6;
+      }
+
 
     const settings = {
     //   dots: true,
       infinite: true,
-      slidesToShow: 6,
+      slidesToShow: slidesToShowNum,
       slidesToScroll: 1,
       autoplay: true,
       speed: 3000,

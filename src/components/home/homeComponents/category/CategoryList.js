@@ -17,6 +17,7 @@ function CategoryList(){
             <div className={`container ${style.container}`}>
             <h1 className={style.categoryTitle}>Category List</h1>
             <TopList/>
+            <h1 className={style.categoryTitle}>Service List</h1>
             <BottomList/>
             <Link to={`/Category/0`} className={style.navLink} onClick={handleChangePage}>
             <button className={style.seeAllBtn}>See All</button>

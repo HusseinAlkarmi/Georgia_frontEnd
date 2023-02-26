@@ -23,7 +23,7 @@ function Jobs({handleChangePage}) {
                 <div className={`col-sm-12 col-md-6 ${style.colCenter}`} >
                     <Link to="/Jobs/Job"  onClick={handleChangePage} className={style.navLink}>
                         <div className={style.jobCard} onClick={() => handleJobClick('job')}>
-                            <img className="" height={350} src={require('../../images/rent.png')} alt="Card image cap"/>
+                            <img className="" height={350} src={require('../../images/rentIcon.png')} alt="Card image cap"/>
                             <div className="">
                                 <h2 className={style.cardText}>Jobs</h2>
                             </div>
@@ -33,7 +33,7 @@ function Jobs({handleChangePage}) {
                 <div className={`col-sm-12 col-md-6 ${style.colCenter}`} >
                     <Link to="/Jobs/Rent" onClick={handleChangePage} className={style.navLink}>
                        <div className={style.jobCard} onClick={() => handleJobClick('acc')}>
-                         <img className="" height={350} src={require('../../images/rent.png')} alt="Card image cap"/>
+                         <img className="" height={350} src={require('../../images/rentIcon.png')} alt="Card image cap"/>
                          <div className="">
                             <h2 className={style.cardText}>Rent</h2>
                          </div>

@@ -10,7 +10,7 @@ function SliderList({id, name, handleClick, activeIndex}){
         <>
         {/* <li key="{key}">{props.text}</li> */}
         <li  className={`${activeIndex === id ? style.activeLi : ""}`} onClick={() => handleClick(id)}>
-                <div >
+                <div>
                     <img className={style.subImg} src={require(`../../assets/Images/subCategory/${id}_icon.png`)}/>
                     <p className={style.subTitle}>{`${name}`}</p>
                 </div>
