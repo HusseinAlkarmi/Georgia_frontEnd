@@ -50,6 +50,7 @@ function Login(props){
 
             props.setUserName(name);
             localStorage.setItem("userToken", tok);
+            localStorage.setItem("userName", name);
             props.setIsLogedIn(true);
             props.handleCloseModalLogin();
             
@@ -132,7 +133,7 @@ function Login(props){
 
                 </form>
 
-                <div className="row">
+                <div className="row mt-5">
                     <h4 className={`mt-3 ${loginStyle.loginTitleChoice}`}>Or login with </h4>
                 </div>
                 <div className="row d-flex justify-content-center mt-3">
@@ -141,9 +142,9 @@ function Login(props){
                     <a className=" col-2" href="#"><i className={`fab fa-twitter-square ${loginStyle.twitter} ${loginStyle.socialIcon}`}></i></a>
                 </div>
 
-                <div className="row mt-5">
+                <div className="row mt-2">
                 {/* <Link className={`${loginStyle.regester}`} to="/Regester">Regester New Account</Link> */}
-                <button className={`${loginStyle.regester}`} onClick={handleOpenModalRegester}>Regester New Account</button>
+                <button className={`${loginStyle.regester}`} onClick={handleOpenModalRegester}>Register New Account</button>
                 </div>
 
 

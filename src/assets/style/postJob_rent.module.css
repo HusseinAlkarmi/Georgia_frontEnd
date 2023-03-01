@@ -99,3 +99,18 @@ z-index: 4;
   padding: 12px;
 }
 
+.warningMessage{
+  position: absolute;
+  background: rgb(0 0 35 / 75%);
+  text-align: center;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    /* left: 0; */
+    bottom: 70px;
+    border-radius: 15px;
+}

@@ -2,12 +2,12 @@ import React from "react";
 import style from "../../assets/style/job_rent/card.module.css";
 
 
-function Card({id, title, name, setPopJobInfo, popJobInfo, setShowModal, setJobPopUp}){
+// function Card({id, title, name, setPopJobInfo, popJobInfo, setShowModal, setJobPopUp}){
+function Card({id, company, created_at, description, email, phone, place, salary, type, title, user_image, user_name, setShowModal, setJobPopUp, popJobInfo, setPopJobInfo}){
 
     function handleJobCardClick(){
         document.body.style.overflow = 'hidden';
-        setPopJobInfo({id});
-        setPopJobInfo({...popJobInfo, id: id, name: name});
+        setPopJobInfo({...popJobInfo, id: id, name: user_name, place:place, email:email, phone:phone, salary:salary, type:type, title:title, description:description, user_image:user_image, company:company});
         setJobPopUp(true);
         setShowModal(true);
     }
@@ -26,24 +26,24 @@ function Card({id, title, name, setPopJobInfo, popJobInfo, setShowModal, setJobP
 
             <div className={`row ${style.card_content}`}>
                 <div className={`col-3`}>
-                    <img className={`${style.card_img}`} src={require('../../assets/Images/job_rent/black.png')} alt={'Job'}/>
+                    <img className={`${style.card_img}`} src={user_image} alt={'Job'}/>
                 </div>
                 <div className={`pt-1 col-9 ${style.title}`}>
                     <h4>{title}</h4>
                     <div className={`d-flex ${style.place}`}>
                     <i className="fas fa-thumbtack"></i>
-                    <p>Place</p>
+                    <p>{place}</p>
                     </div>
                 </div>
             </div>
 
             <div className={`row ${style.card_content}`}>
-                <h5>{name}</h5>
-                <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem.</p>
+                <h5>{user_name}</h5>
+                <p className={style.cardDescription}>{description}</p>
             </div>
 
             <div className={`row ${style.card_footer}`}>
-                <p>4 days ago</p>
+                <p>{created_at}</p>
             </div>
             </div>
         </div>

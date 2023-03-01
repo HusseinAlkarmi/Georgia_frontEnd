@@ -1,148 +1,258 @@
-
-
-.subCategoryMainDiv{
-    background-color: rgb(173,207,234);
-}
-
-
-.categoryContainer{
-display: flex;
-justify-content: center;
-align-items: center;
-background-image: url("../Images/subCategory/headSubCategoryBackground.png");
-width: 100%;
-object-fit: contain;
-flex-direction: column;
-}
-
-.categoryContainer div{
+.subCategoryMainDiv {
+    background-color: rgb(173, 207, 234);
+  }
+  
+  .categoryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Images/subCategory/headSubCategoryBackground.png");
+    width: 100%;
+    object-fit: contain;
+    flex-direction: column;
+  }
+  
+  .categoryContainer div {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.categoryContainer img{
-filter: brightness(66%);
-object-fit: cover;
-border-radius: 30px;
-width: 84%;
-height: 450px;
-
-}
-
-.categoryContainer h1{
+  }
+  .categoryContainer img {
+    filter: brightness(66%);
+    object-fit: cover;
+    border-radius: 30px;
+    width: 84%;
+    height: 450px;
+  }
+  
+  .categoryContainer h1 {
     color: white;
-}
-
-.categoryContainer div div {
+  }
+  
+  .categoryContainer div div {
     color: white;
     position: absolute;
-}
-
-iframe{
-    overflow:hidden;
-    background:none;
-    height:550px;
-    width:95%;
+  }
+  
+  iframe {
+    overflow: hidden;
+    background: none;
+    height: 550px;
+    width: 95%;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.mapSection{
-    padding-top: 135px;
-}
-.categoryTitle{
-   padding: 0px 16px;
-}
-.cardContainer{
+  }
+  .mapSection {
+    padding-top: 90px;
+  }
+  .categoryTitle {
+    padding: 0px 16px;
+  }
+  .cardContainer {
     display: flex;
     flex-wrap: wrap;
-}
-
-.card{
-margin: 10px;
-text-align: center;
-border-radius: 17px;
-width: 28%;
-}
-.card img{
+  }
+  
+  .card {
+    margin: 10px;
+    text-align: center;
+    border-radius: 17px;
+    width: 28%;
+  }
+  .card img {
     object-fit: cover;
     width: 100%;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-}
-.card p{
-    background-color: rgb(203,226,244);
+  }
+  .card p {
+    background-color: rgb(203, 226, 244);
     padding: 15px;
     border-radius: bottom 47px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-}
-.categoryBody{
+    height: 75px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .cardService {
+    margin: 10px;
+    text-align: center;
+    border-radius: 17px;
+    width: 18%;
+  }
+  
+  .cardServiceContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cardService img {
+    object-fit: cover;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  .cardService p {
+    background-color: rgb(203, 226, 244);
+    padding: 15px;
+    border-radius: bottom 47px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    height: 75px;
+  
+  }
+  
+  .categoryBody {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-}
-.searchField{
-    /* position: relative; */
+  }
+  .searchField {
     padding: 0px 12px;
-    /* position: absolute; */
     top: 77px;
     width: 70% !important;
-}
-
-.searchField input {
+  }
+  
+  .searchField input {
     background-color: #f0f0f0;
     border: none;
     border-radius: 10px;
     padding: 13px 55px;
     width: 60%;
   }
-
- .dealsContainer{
+  
+  .dealsContainer {
     display: flex;
-   justify-content: center;
-   /* padding:50px 0px;  */
+    justify-content: center;
   }
- .dealsCard{
+  .dealsCard {
     margin: 10px;
     text-align: center;
     border-radius: 27px;
     width: 20%;
-    background-color: rgb(171,205,232);
-     
- }
- .dealsCard img{
+    background-color: rgb(171, 205, 232);
+  }
+  .dealsCard img {
     object-fit: cover;
     width: 100%;
     border-radius: 25px;
     filter: brightness(70%);
-    height: 279px;
-
- }
- .dealsCard p{
-   padding: 20px;
-   border-bottom-left-radius: 30px;
-   border-bottom-right-radius: 30px;
-
- }
- .firstContainer{
+    /*  height: 279px;  */
+  }
+  .dealsCard p {
+    padding: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    height: 70px;
+  }
+  .firstContainer {
     padding-top: 73px;
-    background-image: url('../Images/subCategory/dealsSubCategoryBackground.png');
-
- }
- .dealsTitle{
-    padding: 0px 288px;
- }
-
- .searchIcon{
+    background-image: url("../Images/subCategory/dealsSubCategoryBackground.png");
+  }
+  .dealsTitle {
+    width: 62%;
+    margin: auto;
+  }
+  
+  .searchIcon {
     -webkit-transform: scaleX(-1);
     color: grey;
     position: relative;
     left: 37px;
     right: 37px;
     z-index: 1;
-}
-
- h1 {
+  }
+  
+  h1 {
     color: #153866;
   }
-
+  
+  @media screen and (min-width: 1024px) {
+    .categoryContainer img {
+      height: 411px;
+    }
+    .cardServiceContainer{
+      display: flex ;
+    justify-content: center  ;
+    }
+    .cardService {
+      width: 17%;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .cardContainer {
+      display: flex !important;
+      justify-content: space-between !important;
+    }
+    .mapSection {
+      order: 1;
+    }
+  
+    iframe {
+      height: 400px;
+      width: 90%;
+    }
+    .cardService {
+      width: 25%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      width: 41%;
+    }
+    .cardContainer {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .dealsCard {
+      width: 27%;
+    }
+    .dealsTitle {
+      width: 85%;
+    }
+  
+    .searchField input {
+      width: 100%;
+    }
+    .cardService {
+      width: 46%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .categoryContainer img {
+     
+      height: 337px;
+    }
+    .card {
+      width: 67%;
+    }
+    .cardContainer {
+      display: flex !important;
+      justify-content: center !important;
+    }
+  
+    .searchField input {
+      width: 100%;
+    }
+  
+    .dealsCard {
+      width: 60%;
+    }
+  
+    .dealsContainer {
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+    }
+    .cardService {
+      width: 60%;
+    }
+  }
+  
+  

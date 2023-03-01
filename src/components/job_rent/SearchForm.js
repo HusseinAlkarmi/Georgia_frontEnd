@@ -25,7 +25,7 @@ function SearchForm(){
         <>
         <Col sm="12" md="12" lg="12" className='d-flex align-item-center'>
         <form className={`contact__form w-100 rounded-4 ${style.form}`}>
-            <div className={`row m-4 w-100 ${style.paddingForm}`}>
+            <div className={`row w-100 ${style.paddingForm} ${style.jobSearchMargin}`}>
                 <div className={`col-sm-12 col-md-7 col-lg-7 form-group ${style.search_div} ${style.form_m}`}>
                 <i className={`${style.search_icon} fas fa-search`}></i>
                     <input 

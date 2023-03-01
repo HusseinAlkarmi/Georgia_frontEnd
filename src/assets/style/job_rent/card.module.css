@@ -55,11 +55,20 @@
 
 .title h4{
      margin: 0;
+     max-height: 30px;
+    height: 30px;
+    overflow: hidden;
 }
 
 .card_content{
     padding: 0 25px;
     margin-bottom: 10px !important;
+}
+
+.cardDescription{
+    height: 70px;
+    max-height: 70px;
+    overflow: hidden;
 }
 
 .card_footer{
@@ -204,8 +213,8 @@
 }
 
 .popJobMainImage img{
-    height: 200px;
-    width: 200px;
+    height: 160px;
+    width: 160px;
     margin: auto;
     border-radius: 50%;
 }
@@ -225,19 +234,36 @@
 }
 .popJobLongDisc p{ 
     margin: 0;
+    text-align: center;
+    height: 180px;
+    max-height: 180px;
 }
 
 .popJobContactSection{
-    width: 50%;
+    display: flex;
+    align-items: center;
+    /* width: 50%; */
     margin: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .popJobContactSection h3{
-    background: #D21A4E;
-    color: white;
+    /* background: #D21A4E; */
+    color: #253866;
     padding: 4px 10px;
     border-radius: 15px;
     width: fit-content;
-    margin: 7px auto;
+    /* margin: 7px auto; */
+    margin: 7px;
+    font-weight: bolder;
+}
+
+.popJobContactSection p{
+    padding: 0 20px;
+    margin: 0;
+}
+
+.popJobStrong{
+    font-weight: bolder;
+    /* color: #253866; */
 }

@@ -10,14 +10,11 @@ const Cards = Data.slice(0, 6);
     <div className={`${style.cardSection} mt-3` }> 
       {
           Cards.map(item=> (
-          <>
-            <img src={require(`../../assets/Images/marketProfile/1_marketing.png`)} className="mr-2" />
-          
-          </>
+          <div className={style.cardContainer} key={item.id} >
+            <img src={require(`../../assets/Images/marketProfile/1_marketing.png`)} className="mr-2" />  
+          </div>
           ))  
         }
-
-
     </div>
   );
 }

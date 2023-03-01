@@ -3,7 +3,7 @@ import style from '../../assets/style/userProfile.module.css';
 import { useState } from "react";
 
 
-function LeftImage({setShowFavourite, setShowSave}){
+function LeftImage({setShowFavourite, setShowSave, Data}){
 
     function handleSaveClick(){
         setShowFavourite(false);
@@ -19,8 +19,11 @@ function LeftImage({setShowFavourite, setShowSave}){
         <>
         <div className="col-sm-12 col-md-6 col-lg-6">
             <div className={`col-sm-12 col-md-6 col-lg-6 d-flex ${style.leftDivImg}`}>
-                <img className={style.profileImg} src={require("../../assets/Images/userProfile/profilePic.png")} alt="profile picture" height={300}/>
+                <img className={style.profileImg} src={Data.photo} alt="profile picture" height={300}/>
             </div>
+
+            <input type="file" className="form-control" placeholder="image" />
+
 
             <div className={`col-sm-12 col-md-6 col-lg-6 d-flex ${style.leftBtnSection}`}>
                 <button className={style.favoriteBtn} onClick={handleSaveClick}>Favorite</button>

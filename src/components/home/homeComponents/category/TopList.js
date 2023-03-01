@@ -3,93 +3,99 @@ import Slider from "react-slick";
 import style from './categoryList.module.css'
 import CategoryCard from "./CategoryCard";
 import useAxios from "../../../../hooks/useAxios";
+import { Link } from 'react-router-dom';
 
 function SampleNextArrow(props) {
 
-  // const [Data] = useAxios("en/main-categories");
-  //       const BlogCardsData = Data.data;
-  //       const BlogCards = BlogCardsData;
-  //       console.log(BlogCards);
+        const [Data] = useAxios("en/main-categories");
+        const BlogCardsData = Data?.data?.service;
+        console.log(BlogCardsData);
 
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "none"}}
-        onClick={onClick}
-      />
-    );
-  }
-  
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "none"}}
-        onClick={onClick}
-      />
-    );
-  }
+        // const BlogCards = BlogCardsData;
+        // console.log(BlogCards);
 
-  
-export default class AutoPlay extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            list:[]
-        };
-    }
-
-
-    componentDidMount(){
-
-        fetch('https://dashboard.allarabinusa.com/api/v1/en/main-categories')
-        .then(response => response.json())
-        .then(data => data.data)
-        .then(data => data.service)
-        .then(users => this.setState(
-          () => { return {list: users}}
-           ));
-
-    
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "none" }}
+            onClick={onClick}
+          />
+        );
       }
-
-
-  render() {
-    const CardList = this.state.list.map(item =>  
-      <CategoryCard key={item.id} name = {item.name} id = {item.id} image = {item.image}/>
-      )
-
-      let slidesToShowNum = Math.round(CardList.length / 1.5);
-            console.log(Math.round(CardList.length / 1.5));
-
-      if(slidesToShowNum > 6){
-        slidesToShowNum = 6;
+      
+      function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "none" }}
+            onClick={onClick}
+          />
+        );
       }
-
-
-    const settings = {
-    //   dots: true,
-      infinite: true,
-      slidesToShow: slidesToShowNum,
-      slidesToScroll: 1,
-      autoplay: true,
-      speed: 3000,
-      autoplaySpeed: 10,
-      cssEase: "linear",
-      pauseOnHover: true,
-      rtl: true,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />
-    };
-    return (
-      <div>
-        
-        <Slider {...settings}>
-              {CardList}
-        </Slider>
-      </div>
-    );
-  }
-}
+      
+      export default class AutoPlay extends Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            list: [],
+          };
+        }
+      
+        componentDidMount() {
+          fetch("https://dashboard.allarabinusa.com/api/v1/en/main-categories")
+            .then((response) => response.json())
+            .then((data) => data.data)
+            .then((data) => data.service)
+            .then((users) =>
+              this.setState(() => {
+                return { list: users };
+              })
+            );
+        }
+      
+        render() {
+          const CardList = this.state.list.map((item) => (
+            <Link
+              to={`/Category/0?Page=Shop`}
+              className={style.navLink}
+              onClick={this.props.handleChangePage}
+            >
+              <CategoryCard
+                key={item.id}
+                name={item.name}
+                id={item.id}
+                image={item.image}
+              />
+            </Link>
+          ));
+      
+          let slidesToShowNum = Math.round(CardList.length / 1.5);
+          console.log(Math.round(CardList.length / 1.5));
+      
+          if (slidesToShowNum > 6) {
+            slidesToShowNum = 6;
+          }
+      
+          const settings = {
+            infinite: true,
+            slidesToShow: slidesToShowNum,
+            slidesToScroll: 1,
+            autoplay: true,
+            speed: 3000,
+            autoplaySpeed: 10,
+            cssEase: "linear",
+            pauseOnHover: true,
+            rtl: true,
+            nextArrow: <SampleNextArrow />,
+            prevArrow: <SamplePrevArrow />,
+          };
+          return (
+            <div>
+              <Slider {...settings}>{CardList}</Slider>
+            </div>
+          );
+        }
+      }
+      

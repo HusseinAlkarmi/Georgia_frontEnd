@@ -1,18 +1,17 @@
 import React from "react";
-import style from '../../assets/style/marketProfile.module.css';
 import Map from "../subCategory/Map";
 import WorkHours from "./WorkHours";
+import style from '../../assets/style/marketProfile.module.css';
 
 
-function MarketingMap(){
-
-return(
+function MarketingMap() {
+  return (
     <>
-  
-        <Map />
-        <WorkHours/>
+    <div className={style.MarketingMapContainer}>
+      <Map />
+      <WorkHours />
+    </div>
     </>
-)
- 
+  );
 }
 export default MarketingMap;

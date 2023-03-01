@@ -1,24 +1,14 @@
 import { React, useState, useEffect } from "react";
 import InfoRow from "./InfoRow";
+import axios from 'axios';
 
-function RightInfo(props) {
-  const [profile, setProfile] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+function RightInfo({Data, token, setData}) {
 
-  function fetchData() {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then(([data]) => setProfile([data]))
-      .catch((error) => console.log(error));
-  }
+    // let Rows =  <InfoRow key={Data.id} data = {Data} setData = {setData} token = {token} name = {Data.name} id = {Data.id} email = {Data.email} phone_number = {Data.phone_number}/>;
 
-    let Rows = profile.map(item =>
-      <InfoRow key={item.id} name = {item.name} id = {item.id} email = {item.email} phone = {item.phone}/>
-    )
-
+    let Rows =  <InfoRow key={Data.id} Data = {Data} setData = {setData} token = {token}/>;
+    
   return (
     <>
       <div className="col-sm-12 col-md-6 col-lg-6">

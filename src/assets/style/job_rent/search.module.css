@@ -43,7 +43,7 @@
     justify-content: space-around;
     display: flex;
     flex-direction: column;
-    padding: 0 50px;
+    padding: 0 55px;
 }
 
 .job_btn{
@@ -65,6 +65,10 @@
 
 .paddingForm{
     padding: 0 31px;
+}
+
+.jobSearchMargin{
+    margin: 30px auto !important;
 }
 
 .filterRent{

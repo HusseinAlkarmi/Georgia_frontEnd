@@ -37,8 +37,12 @@
 
 .btnRow{
     display: flex;
-    /* justify-content: space-between; */
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.appBtn{
+padding: 0 !important;
 }
 
 .appBtn img{

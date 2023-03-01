@@ -1,0 +1,32 @@
+.warning{
+    position: absolute;
+    /* background: rgb(0 0 35 / 75%); */
+    background: RGB(248, 215, 218);
+    text-align: center;
+      color: #84546C;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      /* left: 0; */
+      bottom: 70px;
+      border-radius: 15px;
+  }
+.success{
+    position: absolute;
+    /* background: rgb(0 0 35 / 75%); */
+    background: RGB(212, 237, 218);
+    text-align: center;
+      color: #2D693B;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+      /* left: 0; */
+      bottom: 70px;
+      border-radius: 15px;
+  }

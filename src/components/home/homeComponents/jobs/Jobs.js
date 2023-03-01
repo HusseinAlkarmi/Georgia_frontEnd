@@ -18,7 +18,8 @@ function Jobs({handleChangePage}) {
     return(
         <>
         <div className={style.jobContainer}>
-           
+        <h1>What are you interested in?</h1>
+
             <div className={`row ${style.mainJobDiv}`}>
                 <div className={`col-sm-12 col-md-6 ${style.colCenter}`} >
                     <Link to="/Jobs/Job"  onClick={handleChangePage} className={style.navLink}>

@@ -4,7 +4,7 @@
     background-size: cover;
     width: 100%;
     padding: 50px 0;
-    height: 1100px;
+    height: 820px;
     display: flex;
     align-items: end;
 }
@@ -20,9 +20,10 @@
 
 .cardBody{
     background: #5E96C5;
-    height: 325px;
+    height: 340px;
     border-radius: 50px;
-    max-width: 260px;
+    max-width: 300px;
+    width: 300px;
     margin: 10px auto;
     display: flex;
     align-items: center;
@@ -47,4 +48,14 @@
 .blogDisc{
     font-size: 20px;
     color: white;
+}
+
+.blogTitle{
+    position: relative;
+    bottom: 250px;
+    font-weight: 900;
+    text-align: end;
+    color: white;
+    height: 55px;
+    font-size: 70px;
 }

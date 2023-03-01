@@ -8,9 +8,9 @@ function Galllery() {
   return (
       <div className={`${style.rightCards} `}>
         {Cards.map((item) => (
-          <>
+          <div className={style.rightCardsContainer} key={item.id}>
             <img src={require(`../../assets/Images/marketProfile/1_marketing.png`)} />
-          </>
+          </div>
         ))}
       </div>
   );

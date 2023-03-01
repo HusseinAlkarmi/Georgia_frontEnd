@@ -32,8 +32,9 @@ function Blog(){
     return(
         <>
         <div className={style.mainDiv}>
-           
+
         <div className="container">
+        <h1 className={style.blogTitle}>Blog</h1>
             <div className={`row ${style.cardsRowCenter}`}>
               {cards}
             </div>

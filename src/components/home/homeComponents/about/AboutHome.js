@@ -32,8 +32,8 @@ function AboutHome(){
     return(
         <>
         <div className={style.mainDiv}>
-           
         <div className="container">
+          <h1 className="mb-5">Who we Are?</h1>
             <div className={`row ${style.cardsRowCenter}`}>
               {cards}
             </div>

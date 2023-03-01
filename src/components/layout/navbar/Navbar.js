@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,6 +18,15 @@ function Navbar() {
   const [t, i18n] = useTranslation();
   const [userName, setUserName] = useState("Guest");
   const [isLogedIn, setIsLogedIn] = useState(false);
+
+
+  useEffect(() => {
+  if(localStorage.getItem("userName")){
+    setUserName(localStorage.getItem("userName"));
+    setIsLogedIn(true);
+  }
+});
+
 
   const rtlDir = () => {
     document.getElementById("root").style.direction = "rtl";
@@ -96,7 +105,7 @@ function Navbar() {
             <li>{t("Blog")}</li>
           </Link>
           <Link
-            to="/Service"
+            to="/Category/0?Page=Shop"
             className={style.navLink}
             onClick={handleChangePage}
           >
@@ -158,7 +167,7 @@ function Navbar() {
                   <Dropdown.Item>
                     <Link
                       to="/Profile"
-                      className={style.navLink}
+                      className={`${style.navLink} `}
                       onClick={handleChangePage}
                     >
                       <FontAwesomeIcon icon={faUser} /> Profile

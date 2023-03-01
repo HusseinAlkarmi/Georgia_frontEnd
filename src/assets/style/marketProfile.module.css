@@ -15,16 +15,17 @@
 }
 
 .MarketingContainer .MarketingImg {
-  /* position: relative; */
   object-fit: cover;
   border-radius: 30px;
-  width: 85%;
+  width: 100%;
   box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
     rgb(0 0 0 / 30%) 0px 1px 3px -1px;
   height: 450px;
   filter: brightness(75%);
 }
-
+.MarketingImgContainer{
+  width: 83%;
+}
 .MarketingContainer .GlyphsImg {
   position: relative;
   bottom: 100px;
@@ -33,30 +34,29 @@
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
 }
 .Marketbtn {
-    width: 70%;
-    display: flex;
-    justify-content: end;
-    margin: auto;
-    position: relative;
-    bottom: 130px;
+  width: 70%;
+  display: flex;
+  justify-content: end;
+  margin: auto;
+  position: relative;
+  bottom: 130px;
 }
-.Marketbtn button{
-    background-color: #c81c50;
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-   
+.Marketbtn button {
+  background-color: #c81c50;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
-.subHeader{
-    display: flex;
-    width: 73%;
+.subHeader {
+  display: flex;
+  width: 87%;
    justify-content: flex-start;
-    margin: auto;
-    height: 50px;
+  margin: auto;
+  height: 50px;
 }
 .descriptionSection {
   background-color: rgb(142, 188, 220);
-  width: 65%;
+  width: 96.6%;
   padding: 15px;
   margin: 0px 14px;
 }
@@ -65,18 +65,23 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+.cardContainer{
+  width:30%
+}
+
 .cardSection img {
   height: 151px;
   margin: 13px 0px;
   object-fit: cover;
-  width: 31%;
+  width: 100%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
 .offerSection {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .offerCards {
@@ -90,14 +95,27 @@
   color: white;
 }
 
+.offerTitle{
+  width: 100%;
+}
+
 iframe {
   overflow: hidden;
   background: none;
-  height: 420px;
+  height: 413px !important;
   width: 89%;
   display: flex;
   margin: auto;
   box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.MarketingMapContainer{
+  margin-top: 14px;
+
+}
+.MarketingMapContainer iframe{
+  height: 375px !important;
+  width: 95.2%;
 }
 
 .marketingContainerSection {
@@ -107,8 +125,9 @@ iframe {
 .workHoursSection {
   background-color: #8ebcdc;
   display: flex;
-  width: 89% !important;
   padding: 10px;
+  width: 95.5% !important;
+  margin: 0px 10px;
 }
 .workHoursRight p {
   padding-left: 25px;
@@ -156,15 +175,21 @@ iframe {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+
 .rightCards img {
   margin: 4px 0px;
   object-fit: cover;
-  width: 30%;
+  width: 100%;
   border-radius: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
+.rightCardsContainer{
+  width: 30%;
+
+}
 .galleryTitle {
   padding: 10px;
   background-color: rgb(143, 188, 219);
@@ -183,21 +208,45 @@ iframe {
 }
 .lastSection {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .lastSection img {
   height: 220px;
-  width: 33%;
+  width: 95%;
   object-fit: cover;
   border-radius: 15px;
-  margin: 0px 10px;
-  filter: brightness(75%);
+  /*  margin: 0px 10px; 
+   filter: brightness(75%);  */
+}
+
+.lastSection img:hover{
+  filter: brightness(60%);
+
+}
+ .interested{
+  display: none;
+  position: absolute;
+  left: 10%;
+  bottom: 25px;
+  font-size: 30px;
+
+}
+ .interestedCardContainer:hover .interested{
+  display: block !important;
+  color: white;
+}
+.interestedCardContainer{
+  position: relative;
 }
 
 .subLastSection {
   margin: auto;
   padding: 30px 10px;
+}
+.interestedCardContainer{
+  width:33%
 }
 .mainSection {
   background-image: url("../Images/marketProfile/bottomServiceBackground.png");
@@ -208,3 +257,164 @@ iframe {
 h2 {
   color: #153866;
 }
+
+.FavoriteContactContainer{
+  color: #23456A;
+  display: flex !important;
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .galleryTitle{
+  width: 52%;
+  }
+}
+
+@media (max-width: 991px) {
+  .MarketingMapContainer iframe{
+    height: 375px !important;
+    width: 90.2%;
+  }
+  .MarketingContainer .MarketingImg {
+    height: 393px !important;
+
+  }
+  .workHoursSection {
+    width: 90% !important;
+  }
+  .galleryTitleDiv {
+    padding: 6px 17px;
+  }
+  .MarketingContainer .GlyphsImg {
+    height: 166px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+.cardContainer{
+  width: 43%;
+}
+.offerTitle{
+  width: 74%;
+}
+.offerCards{
+  width: 36.5%;
+}
+.MarketingContainer .MarketingImg{
+height: 343px !important;
+}
+.MarketingContainer .GlyphsImg {
+  bottom: 83px;
+  height: 149px ;
+}
+.subHeader {
+  width: 87%; 
+}
+.marketTitleSize{
+font-size: 20px;
+}
+
+.rightCardsContainer{
+width: 44%;
+margin: 5px 0px;
+}
+.galleryTitleDiv {
+  padding: 6px 26px;
+}
+
+.rightCards img {
+  max-height: 185px;
+}
+.lastSection img {
+  height: 200px;
+
+}
+.interestedCardContainer{
+  width: 49% !important;
+  margin: 8px 0px;
+
+}
+.socialMediaIcon {
+  width: 28% !important;
+
+}
+.socialMediaSection{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.FavoriteContactContainer{
+  font-size: 13px;
+}
+}
+
+@media (max-width: 500px) {
+  .FavoriteContactContainer{
+    display: block !important;
+  }
+  .FavoriteContactContainer p{
+    font-size: 12px;
+    display: inline-block !important;
+    width: 50%;
+  }
+}
+@media (max-width: 480px) {
+
+.cardContainer{
+  width: 70%;
+}
+.MarketingContainer .GlyphsImg {
+  bottom: 56px;
+  height: 119px;
+}
+.subHeader {
+  width: 90%;
+}
+.MarketingContainer .MarketingImg{
+  height: 292px ;  
+
+}
+.Marketbtn button {
+  font-size: 12px;
+}
+
+.Marketbtn {
+
+    width: 70%;
+    bottom: 113px;
+}
+.FavoriteContactContainer{
+  font-size: 11px;
+}
+.marketTitleSize{
+  font-size: 17px;
+  }
+.interestedTitle{
+  font-size: 22px;
+  text-align: center;
+}
+.interestedCardContainer{
+  width: 67% !important;
+}
+
+.lastSection {
+  justify-content: center;
+}
+.galleryTitleDiv {
+  padding: 6px 21px;
+}
+.socialMediaIcon {
+  width: 32% !important;
+
+}
+}
+@media (min-width: 481px) and (max-width: 517px) {
+  .FavoriteContactContainer{
+    font-size: 12px;
+  }
+}
+
+ 
+

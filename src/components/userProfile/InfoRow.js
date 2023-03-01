@@ -1,45 +1,67 @@
 import React, { useState, useEffect } from 'react';
 import style from '../../assets/style/userProfile.module.css';
-
+import axios from 'axios';
+import useAxios from "../../hooks/useFetchPost";
   
-function InfoRow(props) {
-    const [userData, setUserData] = useState(props);
+function InfoRow({Data, token , setData}) {
+    // const [userData, setUserData] = useState(Data);
     const [isEditing, setIsEditing] = useState(false);
-    const [editedData, setEditedData] = useState(props);
+    const [editedData, setEditedData] = useState(Data);
+
+    const formData = new FormData();
+    formData.append('id', Data.id);
+    formData.append('name', Data.name);
+    formData.append('email', Data.email);
+    formData.append('phone_number', Data.phone_number);
+    formData.append('email_verified_at', Data.email_verified_at);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+
+
 
 
     function handleEditClick() {
         setIsEditing(true);
-        setEditedData(userData);
+        setEditedData(Data);
       }
 
       function handleCancelClick() {
-        setUserData(editedData);
+        setData(editedData);
         setIsEditing(false);
       }
 
+      const [res] = useAxios("en/profile", formData, token);
 
-      function handleSaveClick() {
-        // fetch('https://jsonplaceholder.typicode.com/users/1', {
-        //   method: 'PUT',
-        //   body: JSON.stringify(editedData),
-        //   headers: {
-        //     'Content-type': 'application/json; charset=UTF-8',
-        //   },
-        // })
-        //   .then(response => response.json())
-        //   .then(data => {
-        //     setUserData(data);
-        //     setIsEditing(false);
-        //   })
-        //   .catch(error => console.log(error));
-        setEditedData(userData);
+
+      function HandleSaveClick() {
+        // const [Data] = useAxios("en/profile", formData, token);
+        // console.log(Data);
+
+        try {
+
+          // fetch(`https://dashboard.allarabinusa.com/api/v1/en/profile`, {
+          //   headers: { 'Authorization': `Bearer ${token}` },
+          //   method: 'POST',
+          //   body: formData
+          // })
+          // .then((response) => console.log(response))
+
+
+          // axios.post('https://dashboard.allarabinusa.com/api/v1/en/profile',userData, {
+          //   headers: { 'Authorization': `Bearer ${token}` }
+          // }).then((response) => response.data);
+        } 
+        catch (error) {
+          console.log(error);
+        };
+        console.log(Data);
+        setEditedData(Data);
         setIsEditing(false);
       }
 
       function handleInputChange(event) {
         const { name, value } = event.target;
-        setUserData(prevData => ({ ...prevData, [name]: value }));
+        setData(prevData => ({ ...prevData, [name]: value }));
       }
    
 
@@ -56,7 +78,7 @@ function InfoRow(props) {
                 type="text"
                 id="name"
                 name="name"
-                value={userData.name}
+                value={Data.name}
                 onChange={handleInputChange}
             />
         </div>
@@ -67,23 +89,23 @@ function InfoRow(props) {
                 type="email"
                 id="email"
                 name="email"
-                value={userData.email}
+                value={Data.email}
                 onChange={handleInputChange}
             />
           </div>
 
           <div className={`row col-11 ${style.inputRow}`}>
-            <label className={style.labelProfile} htmlFor="phone">Phone:</label>
+            <label className={style.labelProfile} htmlFor="phone_number">Phone:</label>
             <input
                 type="tel"
                 id="phone"
-                name="phone"
-                value={userData.phone}
+                name="phone_number"
+                value={Data.phone_number}
                 onChange={handleInputChange}
             />
            </div>
            <div className={style.btnDiv}>
-            <button className={style.saveBtn} onClick={handleSaveClick}>Save</button>
+            <button className={style.saveBtn} onClick={HandleSaveClick}>Save</button>
             <button className={style.cancelBtn} onClick={handleCancelClick}>Cancel</button>
            </div>
         </>
@@ -96,7 +118,7 @@ function InfoRow(props) {
                 type="text"
                 id="name"
                 name="name"
-                value={userData.name}
+                value={Data.name}
                 onChange={handleInputChange}
             />
         </div>
@@ -108,19 +130,19 @@ function InfoRow(props) {
                 type="email"
                 id="email"
                 name="email"
-                value={userData.email}
+                value={Data.email}
                 onChange={handleInputChange}
             />
           </div>
 
           <div className={`row col-11 ${style.inputRow}`}>
-            <label className={style.labelProfile} htmlFor="phone">Phone:</label>
+            <label className={style.labelProfile} htmlFor="phone_number">Phone:</label>
             <input
             readOnly
                 type="tel"
                 id="phone"
-                name="phone"
-                value={userData.phone}
+                name="phone_number"
+                value={Data.phone_number}
                 onChange={handleInputChange}
             />
            </div>

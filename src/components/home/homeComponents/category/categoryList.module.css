@@ -61,7 +61,12 @@ margin: 20px auto;
     border-radius: 15px;
     width: 100px;
     text-align: center;
+    text-decoration: none;
 }
+.seeAllBtn:hover{
+    color: white
+}
+
 
 .categoryTitle{
     color: #215395;
