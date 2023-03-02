@@ -1,0 +1,59 @@
+.mainReachoutDiv{
+    background: #C2DEF3;
+    padding: 50px;
+}
+
+.leftReachout{
+    display: flex;
+    align-items: center;
+}
+
+.leftImage{
+    margin: 20px auto;
+    height: 300px;
+}
+
+.formDiv{
+    background: transparent;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #00244E;
+}
+
+.formControl{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.formControl:focus-visible {
+    border: none;
+    color: #00244E;
+}
+
+::placeholder {
+    color: #00244E;
+    opacity: 1; /* Firefox */
+  }
+
+  .icon{
+    color: #00244E;
+  }
+
+  .formMessage textarea{
+    background: #7EAED6;
+    min-height: 200px;
+  }
+
+  .reachoutBtn{
+    background: #7B9DB9 !important;
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+    font-weight:bold !important; ;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+    border: none;
+  }

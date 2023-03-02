@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./categoryList.module.css";
+import style from "../../../assets/style/homePage/categoryList.module.css";
 
 function CategoryCard(props) {
 

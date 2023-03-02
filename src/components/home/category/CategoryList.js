@@ -1,6 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import style from "./categoryList.module.css";
+import style from "../../../assets/style/homePage/categoryList.module.css";
 import TopList from "./TopList";
 import BottomList from "./BottomList";
 import { Link } from "react-router-dom";

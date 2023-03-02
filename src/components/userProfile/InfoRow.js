@@ -1,24 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import style from '../../assets/style/userProfile.module.css';
-import axios from 'axios';
-import useAxios from "../../hooks/useFetchPost";
   
-function InfoRow({Data, token , setData}) {
-    // const [userData, setUserData] = useState(Data);
+function InfoRow({Data, setData}) {
     const [isEditing, setIsEditing] = useState(false);
     const [editedData, setEditedData] = useState(Data);
-
-    const formData = new FormData();
-    formData.append('id', Data.id);
-    formData.append('name', Data.name);
-    formData.append('email', Data.email);
-    formData.append('phone_number', Data.phone_number);
-    formData.append('email_verified_at', Data.email_verified_at);
-    const data = Object.fromEntries(formData.entries());
-    console.log(data);
-
-
-
 
     function handleEditClick() {
         setIsEditing(true);
@@ -26,48 +11,22 @@ function InfoRow({Data, token , setData}) {
       }
 
       function handleCancelClick() {
-        setData(editedData);
+        setEditedData(Data);
         setIsEditing(false);
       }
 
-      const [res] = useAxios("en/profile", formData, token);
-
-
       function HandleSaveClick() {
-        // const [Data] = useAxios("en/profile", formData, token);
-        // console.log(Data);
-
-        try {
-
-          // fetch(`https://dashboard.allarabinusa.com/api/v1/en/profile`, {
-          //   headers: { 'Authorization': `Bearer ${token}` },
-          //   method: 'POST',
-          //   body: formData
-          // })
-          // .then((response) => console.log(response))
-
-
-          // axios.post('https://dashboard.allarabinusa.com/api/v1/en/profile',userData, {
-          //   headers: { 'Authorization': `Bearer ${token}` }
-          // }).then((response) => response.data);
-        } 
-        catch (error) {
-          console.log(error);
-        };
-        console.log(Data);
-        setEditedData(Data);
+        setData(editedData);
         setIsEditing(false);
       }
 
       function handleInputChange(event) {
         const { name, value } = event.target;
-        setData(prevData => ({ ...prevData, [name]: value }));
+        setEditedData({...editedData, [name]: value});
       }
    
-
     return(
         <>
-
       <div>
       <h1 className={`mt-2 col-11 ${style.profileTitle}`}>Profile Page</h1>
       {isEditing ? (
@@ -78,7 +37,7 @@ function InfoRow({Data, token , setData}) {
                 type="text"
                 id="name"
                 name="name"
-                value={Data.name}
+                value={editedData.name}
                 onChange={handleInputChange}
             />
         </div>
@@ -89,7 +48,7 @@ function InfoRow({Data, token , setData}) {
                 type="email"
                 id="email"
                 name="email"
-                value={Data.email}
+                value={editedData.email}
                 onChange={handleInputChange}
             />
           </div>
@@ -100,7 +59,7 @@ function InfoRow({Data, token , setData}) {
                 type="tel"
                 id="phone"
                 name="phone_number"
-                value={Data.phone_number}
+                value={editedData.phone_number}
                 onChange={handleInputChange}
             />
            </div>
@@ -118,7 +77,7 @@ function InfoRow({Data, token , setData}) {
                 type="text"
                 id="name"
                 name="name"
-                value={Data.name}
+                value={editedData.name}
                 onChange={handleInputChange}
             />
         </div>
@@ -130,7 +89,7 @@ function InfoRow({Data, token , setData}) {
                 type="email"
                 id="email"
                 name="email"
-                value={Data.email}
+                value={editedData.email}
                 onChange={handleInputChange}
             />
           </div>
@@ -142,7 +101,7 @@ function InfoRow({Data, token , setData}) {
                 type="tel"
                 id="phone"
                 name="phone_number"
-                value={Data.phone_number}
+                value={editedData.phone_number}
                 onChange={handleInputChange}
             />
            </div>

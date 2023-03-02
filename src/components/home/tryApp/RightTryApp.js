@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./tryApp.module.css";
+import style from "../../../assets/style/homePage/tryApp.module.css";
 
 
 function RightTryApp(){
@@ -12,11 +12,12 @@ function RightTryApp(){
 
             <div className={style.btnRow}>
                 <button type="button" className={`btn ${style.appBtn}`} onClick={() => window.open("https")}>
-                    <img src={require("../../images/appStore.png")}/>
+                    <img src={require("../../../assets/Images/home/appStore.png")}/>
                 </button>
 
                 <button type="button" className={`btn ${style.appBtn}`} onClick={() => window.open("https://www.youtube.com/")}>
-                    <img src={require("../../images/googlePlay.png")}/>
+                    <img src={require("../../../assets/Images/home/googlePlay.png")}/>
+
                 </button>
             </div>
         </div>

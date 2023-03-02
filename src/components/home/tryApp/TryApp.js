@@ -1,7 +1,7 @@
 import React from "react";
 import LeftTryApp from "./LeftTryApp";
 import RightTryApp from "./RightTryApp";
-import style from "./tryApp.module.css";
+import style from "../../../assets/style/homePage/tryApp.module.css";
 
 
 function TryApp(){

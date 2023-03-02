@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import style from "./categoryList.module.css";
+import style from "../../../assets/style/homePage/categoryList.module.css";
 import CategoryCard from "./CategoryCard";
 import { Link } from 'react-router-dom';
 

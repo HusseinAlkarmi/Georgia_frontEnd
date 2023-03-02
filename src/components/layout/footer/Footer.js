@@ -16,7 +16,7 @@ function Footer(){
                 <LeftFooter/>
                 <MiddleFooter/>
                 <RightFooter/>
-                <RightLogo/>
+                {/* <RightLogo/> */}
                 
             </div>
 

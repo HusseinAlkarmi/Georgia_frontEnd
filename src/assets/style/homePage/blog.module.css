@@ -1,6 +1,6 @@
 .mainDiv{
     background: #ADCFEA;
-    background-image: url("../../images/blogBackground.png");
+    background-image: url("../../Images/home/blogBackground.png");
     background-size: cover;
     width: 100%;
     padding: 50px 0;
@@ -19,15 +19,11 @@
 }
 
 .cardBody{
-    background: #5E96C5;
-    height: 340px;
-    border-radius: 50px;
-    max-width: 300px;
-    width: 300px;
     margin: 10px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #5E96C5;
+    height: 350px;
+    border-radius: 50px;
+    max-width: 350px;
 }
 
 .imgDiv{
@@ -36,20 +32,30 @@
 }
 
 .img{
-    height: 65px;
-    width: 65px !important;
-    margin: 20px auto;
+    height: 225px;
+    width: 100% !important;
+    margin: 0px auto;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
-.blogArticle{
+.description{
+    height: 140px;
+    overflow: hidden;
+}
+
+.aboutArticle{
     padding: 10px 20px;
 }
 
-.blogDisc{
+.aboutDisc{
     font-size: 20px;
+    height: 82px;
+    overflow: hidden;
     color: white;
+    font-weight: 500;
+    padding: 10px;
 }
-
 .blogTitle{
     position: relative;
     bottom: 250px;

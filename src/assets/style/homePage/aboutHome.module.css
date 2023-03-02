@@ -14,7 +14,7 @@
 .cardBody{
     margin: 10px auto;
     background: #5E96C5;
-    height: 300px;
+    height: 350px;
     border-radius: 50px;
     max-width: 310px;
 }
@@ -25,9 +25,16 @@
 }
 
 .img{
-    height: 65px;
-    width: 65px !important;
-    margin: 20px auto;
+    height: 100px;
+    width: 200px !important;
+    margin: 0px auto;
+    margin-top: 15px !important;
+    border-radius: 35px;
+}
+
+.description{
+    height: 140px;
+    overflow: hidden;
 }
 
 .aboutArticle{
@@ -35,5 +42,9 @@
 }
 
 .aboutDisc{
-    font-size: 20px;
+    font-size: 24px;
+    height: 27px;
+    overflow: hidden;
+    color: white;
+    font-weight: 500;
 }

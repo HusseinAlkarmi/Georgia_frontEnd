@@ -1,26 +1,42 @@
 import React from "react";
 import style from '../../../assets/style/footer.module.css';
-
+import { Link } from "react-router-dom";
 
 function MiddleFooter(){
+
+    const handleChangePage = () => {
+        window.scrollTo(0, 0);
+      };
+
     return(
         <>
-        <div className={`col-sm-12 col-md-6 col-lg-2 ${style.serviceFooter}`}>
-            <h2 className={style.midTitle}>Services</h2>
-
+        <div className={`col-sm-12 col-md-6 col-lg-4 ${style.serviceFooter}`}>
             <ul className={style.midUl}>
-                
-                <li>
-                    <h3 className={style.midService}>Blogs</h3>
-                </li>
 
-                <li>
-                    <h3 className={style.midService}>Contact</h3>
-                </li>
+            <Link to="/Jobs/Job" className={style.navLink} onClick={handleChangePage}>
+                 <li className={style.midService}>Services</li>
+            </Link>
 
-                <li>
-                    <h3 className={style.midService}>About</h3>
-                </li>
+            <Link to="/Jobs/Job" className={style.navLink} onClick={handleChangePage}>
+                 <li className={style.midService}>Jobs</li>
+            </Link>
+
+            <Link to="/Jobs/Rent" className={style.navLink} onClick={handleChangePage}>
+                 <li className={style.midService}>Rent</li>
+            </Link>
+
+            <Link to="/Blog" className={style.navLink} onClick={handleChangePage}>
+                 <li className={style.midService}>Blog</li>
+            </Link>
+
+            <Link to="/Blog" className={style.navLink} onClick={handleChangePage}>
+                 <li className={style.midService}>About</li>
+            </Link>
+
+            <Link to="/Blog" className={style.navLink} onClick={handleChangePage}>
+                 <li className={style.midService}>Contact</li>
+            </Link>
+
               
             </ul>
         </div>

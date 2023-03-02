@@ -1,6 +1,5 @@
 import './App.css';
 import {BrowserRouter as Router,Route, Routes} from "react-router-dom";
-import Home from "./components/home/Home";
 import Jobs from "./pages/Job";
 import Navbar from "./components/layout/navbar/Navbar";
 import Footer from "./components/layout/footer/Footer";
@@ -8,6 +7,8 @@ import UserProfile from './pages/UserProfile';
 import MarketProfile from './pages/MarketProfile';
 import SubCategory from './pages/SubCategory';
 import Blog from './pages/Blog';
+import Home from './pages/Home';
+import Reachout from './pages/Reachout';
 
 function App() {
   return (
@@ -23,9 +24,9 @@ function App() {
             <Route path="/Category/:id" element={<SubCategory />} exact />
             <Route path="/MarketProfile" element={<MarketProfile />} exact />
             <Route path="/Blog" element={<Blog />} exact />
+            <Route path="/ReachOut" element={<Reachout />} exact />
             {/*
             <Route path="/Service" element={<Service />} exact />
-            <Route path="/ReachOut" element={<Reachout />} exact />
             <Route path="/AboutUs" element={<About />} exact />
              */}
 
