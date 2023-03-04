@@ -1,17 +1,20 @@
 import React, {useState} from "react";
 import style from "../../assets/style/subCategorySlider.module.css";
-import useFetch from "../../hooks/useFetch";
+import useFetch from "../../hooks/useAxios";
 // import "../mainComponent/mainStyle.css";
 import ScrollContainer from 'react-indiana-drag-scroll'
 import SliderList from "./CardSlider";
+import { useParams } from 'react-router-dom';
 
 function SubCategorySlider(){
-    const [Data] = useFetch("https://jsonplaceholder.typicode.com/users");
-    const subCategoryList = Data.slice(0, 7);
+    const { id } = useParams();
+let url = `en/main-categories/${id}/sub-categories`;
+
+    const [Data] = useFetch(url);
+    const subCategoryList = Data.data;
+    console.log(subCategoryList);
 
     // let subCategoryListTest = [{id :0 , Name : "Coffee"},{id :1, Name : "Desert"},{id :2, Name :"Bakary"}];
-
-
     
     const [activeIndex, setActiveIndex] = useState(0);
     
@@ -19,7 +22,7 @@ function SubCategorySlider(){
         setActiveIndex(index);
     }
     
-    let sliderList = subCategoryList.map(item => <SliderList activeIndex={activeIndex} handleClick={handleClick} name = {item.name} id = {item.id} key = {item.id}/>);
+    let sliderList = subCategoryList?.map(item => <SliderList activeIndex={activeIndex} handleClick={handleClick} name = {item.name} id = {item.id} key = {item.id} image={item.image}/>);
     return(
         <>
 

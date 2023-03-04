@@ -169,6 +169,17 @@
   h1 {
     color: #153866;
   }
+
+  .cardLink{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  
+  .cardLink:hover{
+    color: #153866;
+  }
   
   @media screen and (min-width: 1024px) {
     .categoryContainer img {
@@ -176,7 +187,7 @@
     }
     .cardServiceContainer{
       display: flex ;
-    justify-content: center  ;
+    justify-content: start  ;
     }
     .cardService {
       width: 17%;

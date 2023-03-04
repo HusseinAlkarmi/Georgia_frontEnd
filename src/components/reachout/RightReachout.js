@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import style from "../../assets/style/reachout.module.css";
+import axios from "axios";
 
 function RightReachout() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone:"0000000000",
     message: "",
   });
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -19,12 +23,14 @@ function RightReachout() {
 
     console.log({ ...userInfo });
 
-    // axios.post("https://dashboard.allarabinusa.com/api/v1/en/reachout", userInfo).then((response) => {
-    //     console.log(response.data);
-    //     setFormData({email: '', password: '', remember: 0});
-    //   }).catch((error) => {
-    //     console.error(error);
-    //   });
+    axios.post("https://dashboard.allarabinusa.com/api/v1/ar/contact-us", userInfo).then((response) => {
+      console.log(response.data);
+
+      setFormData({name: '', email: '', phone:"0000000000", message: ''});
+      
+    }).catch((error) => {
+      console.error(error);
+    });
   };
 
   return (
@@ -33,7 +39,7 @@ function RightReachout() {
         <form>
           <div className={`row mt-4 d-flex ${style.formDiv}`}>
             <label htmlFor="name" className={`col-1 `}>
-              <i className={`fas fa-envelope ${style.icon}`}></i>
+              <i className={`fas fa-user ${style.icon}`}></i>
             </label>
             <input
               className={`col-11 ${style.formControl}`}
@@ -48,7 +54,7 @@ function RightReachout() {
 
           <div className={`row mt-4 d-flex ${style.formDiv}`}>
             <label htmlFor="email" className={`col-1 `}>
-              <i className={`fas fa-lock ${style.icon}`}></i>
+              <i className={`fas fa-envelope ${style.icon}`}></i>
             </label>
             <input
               className={`col-11 ${style.formControl}`}

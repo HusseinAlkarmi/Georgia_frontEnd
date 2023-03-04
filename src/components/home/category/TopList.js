@@ -115,13 +115,13 @@ function SampleNextArrow(props) {
           fetch("https://dashboard.allarabinusa.com/api/v1/en/main-categories")
             .then((response) => response.json())
             .then((data) => data.data)
-            .then((data) => data.service)
+            .then((data) => data.business)
             .then((users) => setList(users));
         }, []);
       
         const CardList = list.map((item) => (
           <Link
-            to={`/Category/0?Page=Shop`}
+            to={`/Category/${item.id}?Page=Shop`}
             className={style.navLink}
             onClick={props.handleChangePage}
           >

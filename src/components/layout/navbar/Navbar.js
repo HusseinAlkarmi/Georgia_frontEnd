@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import logo from "./images/logo.png";
-import style from "./navBar.module.css";
-import "./navbar.css";
+import logo from "../../../assets/Images/navbar/logo.png";
+import style from "../../../assets/style/navbar/navBar.module.css";
+import "../../../assets/style/navbar/navbar.css";
 import Dropdown from "react-bootstrap/Dropdown";
-
 import Modal from "../../login_register/Modal";
+import NavSearch from "./NavSearch";
 
 function Navbar() {
   const [Mobile, setMobile] = useState(false);
@@ -127,6 +127,9 @@ function Navbar() {
             <li>{t("Job")}</li>
           </Link>
           <div className={style.buttonDiv}>
+          <div>
+              <NavSearch/>
+            </div>
             {/* <li><button onClick={handleOpenModalLogin}><GiPadlock/>{t('login')}</button></li> */}
 
             <li>

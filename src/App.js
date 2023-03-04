@@ -22,7 +22,7 @@ function App() {
             <Route path="/Profile" element={<UserProfile/>} exact /> 
             <Route path="/Jobs/:type" element={<Jobs/>} exact /> 
             <Route path="/Category/:id" element={<SubCategory />} exact />
-            <Route path="/MarketProfile" element={<MarketProfile />} exact />
+            <Route path="/MarketProfile/:id" element={<MarketProfile />} exact />
             <Route path="/Blog" element={<Blog />} exact />
             <Route path="/ReachOut" element={<Reachout />} exact />
             {/*

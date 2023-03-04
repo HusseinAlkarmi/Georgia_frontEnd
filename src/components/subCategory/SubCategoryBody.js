@@ -14,24 +14,37 @@ function SubCategoryBody(props) {
 
   return (
     <div className={`container`}>
-      <div className="row">
+      {/* <div className="row">
         <SubCategorySlider />
-      </div>
+      </div> */}
 
-      <div className={`${style.categoryBody} row`}>
-        {displayComponent ? (
-          <>
+      {displayComponent ? (
+        <>
+          <div className="row">
+            <SubCategorySlider />
+          </div>
+          <div className={`${style.categoryBody} row`}>
             <div className={`col-lg-4 col-md-12 col-sm-12 ${style.mapSection}`}>
               <Map />
             </div>
             <div className={`col-lg-8 col-md-12 col-sm-12`}>
-              <SubCategoryCard location = {location} queryParams={queryParams} displayComponent = {displayComponent} />
+              <SubCategoryCard
+                location={location}
+                queryParams={queryParams}
+                displayComponent={displayComponent}
+              />
             </div>
-          </>
-        ) : (
-          <SubCategoryCard location = {location} queryParams={queryParams} displayComponent = {displayComponent}/>
-        )}
-      </div>
+          </div>
+        </>
+      ) : (
+        <div className={`${style.categoryBody} row`}>
+          <SubCategoryCard
+            location={location}
+            queryParams={queryParams}
+            displayComponent={displayComponent}
+          />
+        </div>
+      )}
     </div>
   );
 }

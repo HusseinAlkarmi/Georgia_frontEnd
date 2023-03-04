@@ -4,22 +4,25 @@ import useFetch from "../../hooks/useFetch";
 
 function ColumnCards(props) {
   const [Data] = useFetch("https://jsonplaceholder.typicode.com/users");
-  const CardsData = Data.slice(0, 4);
+  const CardsData = Data.slice(0, 3);
 
   return (
-    <div className={`container ${style.columnCardsContainer}`}>
+    <div className={`${style.columnCardsContainer}`}>
       {CardsData.map((item) => (
-        <div className={`${style.secondColCardDiv} row`}>
-            <div className={`${style.colCardImg} col-6`}>
-            <img src={require("../../assets/Images/blog/firstBlog.png")} />
+        <div className={style.columnCardsContainerDiv}>
+          <div className={style.colCardImg}>
+            <img src={require("../../assets/Images/blog/Georgia.png")} />
           </div>
-          <div className="col-6">
-            <h3>lorem </h3>
-            <p>loremmmmm</p>
+          <div className={style.paragraph}>
+            <h5>Some Title here </h5>
+            <p>
+              Lorem Lorem Lorem Lorem Lorem Lorem LoremL Lorem LoremLoremL Lorem
+              Lorem LoremL Lorem Lorem LoremL Lorem Lorem LoremL Lorem Lorem
+              LoremL
+            </p>
           </div>
-          
         </div>
-       ))} 
+      ))}
     </div>
   );
 }

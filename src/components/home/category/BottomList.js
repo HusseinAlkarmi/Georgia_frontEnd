@@ -49,7 +49,7 @@ export default class AutoPlay extends Component {
   render() {
     const CardList = this.state.list.map((item) => (
       <Link
-        to={`/Category/0?Page=Service`}
+        to={`/Category/${item.id}?Page=Service`}
         className={style.navLink}
         onClick={this.props.handleChangePage}
       >

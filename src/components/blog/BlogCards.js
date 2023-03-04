@@ -10,13 +10,15 @@ function BlogCards(props) {
     <>
       <div className={style.blogCardContainer}>
         {BlogCardsData.map((item) => (
-          <div className={style.secondCardDiv}>
-            <div>
-              <h3>lorem </h3>
-              <p>loremmmmm</p>
+          <div key={item.id} className={style.cardImg}>
+            <div className={style.cardImageDiv}>
+              <img
+                src={require(`../../assets/Images/subCategory/category_img.png`)}
+              />
             </div>
-            <div className={style.cardImg}>
-              <img src={require("../../assets/Images/blog/firstBlog.png")} />
+            <div className={style.cardText}>
+              <h5>Some Title here </h5>
+              <p>Lorem ipsum dolor sit amet, consectetur ..</p>
             </div>
           </div>
         ))}
