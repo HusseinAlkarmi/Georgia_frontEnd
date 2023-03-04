@@ -121,11 +121,12 @@ function SampleNextArrow(props) {
       
         const CardList = list.map((item) => (
           <Link
+            key={item.id}
             to={`/Category/${item.id}?Page=Shop`}
             className={style.navLink}
             onClick={props.handleChangePage}
           >
-            <CategoryCard key={item.id} name={item.name} id={item.id} image={item.image} />
+            <CategoryCard name={item.name} id={item.id} image={item.image} />
           </Link>
         ));
       

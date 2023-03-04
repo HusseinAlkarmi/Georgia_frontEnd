@@ -38,7 +38,7 @@ export default class AutoPlay extends Component {
     fetch("https://dashboard.allarabinusa.com/api/v1/en/main-categories")
       .then((response) => response.json())
       .then((data) => data.data)
-      .then((data) => data.business)
+      .then((data) => data.service)
       .then((users) =>
         this.setState(() => {
           return { list: users };
@@ -47,14 +47,15 @@ export default class AutoPlay extends Component {
   }
 
   render() {
-    const CardList = this.state.list.map((item) => (
+    const CardList = this.state.list?.map((item) => (
       <Link
+        key={item.id}
         to={`/Category/${item.id}?Page=Service`}
         className={style.navLink}
         onClick={this.props.handleChangePage}
       >
         <CategoryCard
-          key={item.id}
+          
           name={item.name}
           id={item.id}
           image={item.image}
@@ -62,7 +63,7 @@ export default class AutoPlay extends Component {
       </Link>
     ));
 
-    const slidesToShowNum = Math.round(CardList.length / 1.5);
+    let slidesToShowNum = Math.round(CardList.length / 1.5);
     // console.log(Math.round(CardList.length / 1.5));
     if (slidesToShowNum > 6) {
       slidesToShowNum = 6;
