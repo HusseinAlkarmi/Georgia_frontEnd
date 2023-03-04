@@ -1,123 +1,120 @@
-.navLink{
+.navLink {
     text-decoration: none;
     background: transparent;
     color: black;
-}
-
-.navbar{
+  }
+  
+  .navbar {
     width: 100%;
     font-size: 5px;
-    line-height:20px;
+    line-height: 20px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color:white;
+    color: white;
     position: relative;
     z-index: 1;
-    background: #6B97BE;
-    /* background: transparent; */
+    background: #6b97be;
     padding: 18px;
     height: 70px;
     transition: 1s;
-    /* position: fixed; */
-}
-
-.activeNav{
+  }
+  
+  .activeNav {
     background: rgba(0, 0, 0, 0.77);
     position: fixed;
     transition: 1s;
     top: 0;
-}
-
-.imgDiv{
+  }
+  
+  .imgDiv {
     display: flex;
-}
-
-.logo {
+  }
+  
+  .logo {
     margin: 3px auto;
-    font-size:30px;
+    font-size: 30px;
     transition: 1s;
     position: absolute;
     top: 4px;
-}
-
-.activeLogo{
+  }
+  
+  .activeLogo {
     transition: 1s;
-    position:fixed ;
-}
-
-.navLinks{
+    position: fixed;
+  }
+  
+  .navLinks {
     margin: 0;
     display: flex;
     justify-content: center;
     top: 15px;
     transition: 1s;
-}
-
-.activeNavLinks{
+    align-items: center;
+  }
+  
+  .activeNavLinks {
     color: white;
-    /* padding: 20px;
-    z-index: 1000; */
-}
-
-.activeNavLinks li {
-    color: white !important; 
-}
-
-.navLinks li {
-    color:white;
+  }
+  
+  .activeNavLinks li {
+    color: white !important;
+  }
+  
+  .navLinks li {
+    color: white;
     font-size: 20px;
     padding: 0 10px;
     margin: 0 10px;
     cursor: pointer;
     border-radius: 7px;
-    transition:.4s;
+    transition: 0.4s;
     text-transform: capitalize;
     text-decoration: none;
-}
-
-.navLinks li button{
-    font-size:12px;
+  }
+  
+  .navLinks li button {
+    font-size: 12px;
     font-weight: bolder;
-    background: #C81C50;
+    background: #c81c50;
     border-radius: 7px;
-    color:white;
-    padding:0px 10px;
-}
-
-.buttonDiv{
+    color: white;
+    padding: 0px 10px;
+  }
+  
+  .buttonDiv {
     margin: 0;
     display: flex;
     flex-direction: row;
-    align-items: start;
     border-radius: 50%;
-}
-
-.buttonDiv li{
+    align-items: center;
+  }
+  
+  .buttonDiv li {
     margin: 0;
-}
-
-.dropDown{
+  }
+  
+  .dropDown {
     background: transparent !important;
     border: none !important;
     padding: 0 !important;
     line-height: 0 !important;
-}
-
-.dropDown li {
-    font-size:12px;
+  }
+  
+  .dropDown li {
+    font-size: 12px;
     font-weight: bolder;
-    background: #C81C50;
+    background: #c81c50;
     border-radius: 7px;
-    color:white;
-    padding:5px 10px !important;
-}
-
-.dropDown::after{
+    color: white;
+    padding: 5px 10px !important;
+  }
+  
+  .dropDown::after {
     content: none !important;
-}
-
-.searchBox {
+  }
+  
+  .searchBox {
     height: 20px;
     border-radius: 40px;
     padding: 10px;
@@ -161,5 +158,9 @@
     width: 0px;
     background-color: #eeeeee;
     border-radius: 15px;
+  }
+  .navBarDiv {
+    display: flex;
+    align-items: center;
   }
   

@@ -37,6 +37,7 @@ function BlogPage() {
           <div className="row">
             <div>
               <BlogCards />
+              <Tags />
             </div>
           </div>
         </div>
@@ -46,7 +47,6 @@ function BlogPage() {
         <div className={`container`}>
           <div className={style.columnCardsMainDiv}>
             <ColumnCards />
-            <Tags />
           </div>
         </div>
 
