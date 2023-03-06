@@ -23,7 +23,7 @@
   height: 450px;
   filter: brightness(75%);
 }
-.MarketingImgContainer{
+.MarketingImgContainer {
   width: 83%;
 }
 .MarketingContainer .GlyphsImg {
@@ -32,6 +32,8 @@
   border-radius: 15px;
   height: 195px;
   box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  object-fit: cover;
+  width: 25%;
 }
 .Marketbtn {
   width: 70%;
@@ -50,7 +52,7 @@
 .subHeader {
   display: flex;
   width: 87%;
-   justify-content: flex-start;
+  justify-content: flex-start;
   margin: auto;
   height: 50px;
 }
@@ -66,8 +68,8 @@
   justify-content: space-evenly;
 }
 
-.cardContainer{
-  width:30%
+.cardContainer {
+  width: 30%;
 }
 
 .cardSection img {
@@ -95,7 +97,7 @@
   color: white;
 }
 
-.offerTitle{
+.offerTitle {
   width: 100%;
 }
 
@@ -109,11 +111,10 @@ iframe {
   box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
 }
 
-.MarketingMapContainer{
+.MarketingMapContainer {
   margin-top: 14px;
-
 }
-.MarketingMapContainer iframe{
+.MarketingMapContainer iframe {
   height: 375px !important;
   width: 95.2%;
 }
@@ -128,6 +129,11 @@ iframe {
   padding: 10px;
   width: 95.5% !important;
   margin: 0px 10px;
+  flex-direction: column;
+}
+.workHoursRight {
+  display: flex !important;
+  flex-direction: row !important;
 }
 .workHoursRight p {
   padding-left: 25px;
@@ -176,19 +182,18 @@ iframe {
   justify-content: space-evenly;
 }
 
-
 .rightCards img {
   margin: 4px 0px;
   object-fit: cover;
   width: 100%;
+  height: 100px;
   border-radius: 15px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.rightCardsContainer{
+.rightCardsContainer {
   width: 30%;
-
 }
 .galleryTitle {
   padding: 10px;
@@ -217,27 +222,23 @@ iframe {
   width: 95%;
   object-fit: cover;
   border-radius: 15px;
-  /*  margin: 0px 10px; 
-   filter: brightness(75%);  */
 }
 
-.lastSection img:hover{
+.lastSection img:hover {
   filter: brightness(60%);
-
 }
- .interested{
+.interested {
   display: none;
   position: absolute;
   left: 10%;
   bottom: 25px;
   font-size: 30px;
-
 }
- .interestedCardContainer:hover .interested{
+.interestedCardContainer:hover .interested {
   display: block !important;
   color: white;
 }
-.interestedCardContainer{
+.interestedCardContainer {
   position: relative;
 }
 
@@ -245,8 +246,8 @@ iframe {
   margin: auto;
   padding: 30px 10px;
 }
-.interestedCardContainer{
-  width:33%
+.interestedCardContainer {
+  width: 33%;
 }
 .mainSection {
   background-image: url("../Images/marketProfile/bottomServiceBackground.png");
@@ -258,26 +259,24 @@ h2 {
   color: #153866;
 }
 
-.FavoriteContactContainer{
-  color: #23456A;
+.FavoriteContactContainer {
+  color: #23456a;
   display: flex !important;
 }
 
-
 @media (min-width: 992px) and (max-width: 1200px) {
-  .galleryTitle{
-  width: 52%;
+  .galleryTitle {
+    width: 52%;
   }
 }
 
 @media (max-width: 991px) {
-  .MarketingMapContainer iframe{
+  .MarketingMapContainer iframe {
     height: 375px !important;
     width: 90.2%;
   }
   .MarketingContainer .MarketingImg {
     height: 393px !important;
-
   }
   .workHoursSection {
     width: 90% !important;
@@ -291,130 +290,119 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  
-.cardContainer{
-  width: 43%;
-}
-.offerTitle{
-  width: 74%;
-}
-.offerCards{
-  width: 36.5%;
-}
-.MarketingContainer .MarketingImg{
-height: 343px !important;
-}
-.MarketingContainer .GlyphsImg {
-  bottom: 83px;
-  height: 149px ;
-}
-.subHeader {
-  width: 87%; 
-}
-.marketTitleSize{
-font-size: 20px;
-}
+  .cardContainer {
+    width: 43%;
+  }
+  .offerTitle {
+    width: 74%;
+  }
+  .offerCards {
+    width: 36.5%;
+  }
+  .MarketingContainer .MarketingImg {
+    height: 343px !important;
+  }
+  .MarketingContainer .GlyphsImg {
+    bottom: 83px;
+    height: 149px;
+  }
+  .subHeader {
+    width: 87%;
+  }
+  .marketTitleSize {
+    font-size: 20px;
+  }
 
-.rightCardsContainer{
-width: 44%;
-margin: 5px 0px;
-}
-.galleryTitleDiv {
-  padding: 6px 26px;
-}
+  .rightCardsContainer {
+    width: 44%;
+    margin: 5px 0px;
+  }
+  .galleryTitleDiv {
+    padding: 6px 26px;
+  }
 
-.rightCards img {
-  max-height: 185px;
-}
-.lastSection img {
-  height: 200px;
-
-}
-.interestedCardContainer{
-  width: 49% !important;
-  margin: 8px 0px;
-
-}
-.socialMediaIcon {
-  width: 28% !important;
-
-}
-.socialMediaSection{
-  display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-.FavoriteContactContainer{
-  font-size: 13px;
-}
+  .rightCards img {
+    max-height: 185px;
+  }
+  .lastSection img {
+    height: 200px;
+  }
+  .interestedCardContainer {
+    width: 49% !important;
+    margin: 8px 0px;
+  }
+  .socialMediaIcon {
+    width: 28% !important;
+  }
+  .socialMediaSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .FavoriteContactContainer {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 500px) {
-  .FavoriteContactContainer{
+  .FavoriteContactContainer {
     display: block !important;
   }
-  .FavoriteContactContainer p{
+  .FavoriteContactContainer p {
     font-size: 12px;
     display: inline-block !important;
     width: 50%;
   }
 }
 @media (max-width: 480px) {
+  .cardContainer {
+    width: 70%;
+  }
+  .MarketingContainer .GlyphsImg {
+    bottom: 56px;
+    height: 119px;
+  }
+  .subHeader {
+    width: 90%;
+  }
+  .MarketingContainer .MarketingImg {
+    height: 292px;
+  }
+  .Marketbtn button {
+    font-size: 12px;
+  }
 
-.cardContainer{
-  width: 70%;
-}
-.MarketingContainer .GlyphsImg {
-  bottom: 56px;
-  height: 119px;
-}
-.subHeader {
-  width: 90%;
-}
-.MarketingContainer .MarketingImg{
-  height: 292px ;  
-
-}
-.Marketbtn button {
-  font-size: 12px;
-}
-
-.Marketbtn {
-
+  .Marketbtn {
     width: 70%;
     bottom: 113px;
-}
-.FavoriteContactContainer{
-  font-size: 11px;
-}
-.marketTitleSize{
-  font-size: 17px;
   }
-.interestedTitle{
-  font-size: 22px;
-  text-align: center;
-}
-.interestedCardContainer{
-  width: 67% !important;
-}
+  .FavoriteContactContainer {
+    font-size: 11px;
+  }
+  .marketTitleSize {
+    font-size: 17px;
+  }
+  .interestedTitle {
+    font-size: 22px;
+    text-align: center;
+  }
+  .interestedCardContainer {
+    width: 67% !important;
+  }
 
-.lastSection {
-  justify-content: center;
-}
-.galleryTitleDiv {
-  padding: 6px 21px;
-}
-.socialMediaIcon {
-  width: 32% !important;
-
-}
+  .lastSection {
+    justify-content: center;
+  }
+  .galleryTitleDiv {
+    padding: 6px 21px;
+  }
+  .socialMediaIcon {
+    width: 32% !important;
+  }
 }
 @media (min-width: 481px) and (max-width: 517px) {
-  .FavoriteContactContainer{
+  .FavoriteContactContainer {
     font-size: 12px;
   }
 }
-
- 
-

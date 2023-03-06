@@ -1,20 +1,17 @@
 import React from "react";
-import useFetch from "../../hooks/useFetch";
 import style from '../../assets/style/marketProfile.module.css';
 
 
-function Cards() {
-const[Data] = useFetch('https://jsonplaceholder.typicode.com/users');
-const Cards = Data.slice(0, 6);
+function Cards({data}) {
+
   return (
     <div className={`${style.cardSection} mt-3` }> 
-      {
-          Cards.map(item=> (
+      
+          {data?.gallery?.map(item=> (
           <div className={style.cardContainer} key={item.id} >
-            <img src={require(`../../assets/Images/marketProfile/1_marketing.png`)} className="mr-2" />  
+            <img src={item.image} className="mr-2" />  
           </div>
-          ))  
-        }
+          ))}
     </div>
   );
 }

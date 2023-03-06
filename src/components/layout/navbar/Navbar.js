@@ -127,7 +127,7 @@ function Navbar() {
             <li>{t("Job")}</li>
           </Link>
           <div className={style.buttonDiv}>
-          <div>
+          <div className={style.navBarDiv}>
               <NavSearch/>
             </div>
             {/* <li><button onClick={handleOpenModalLogin}><GiPadlock/>{t('login')}</button></li> */}

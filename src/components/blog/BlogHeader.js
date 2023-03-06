@@ -9,12 +9,12 @@ function BlogHeader(props) {
   return (
     <div className={`${style.blogContainer} pt-3`}>
       {BlogHeaderData.map((item) => (
-        <>
+        <div key={item.id} className={style.blogContainerDiv}>
           <img
             src={require(`../../assets/Images/blog/night.png`)}
           />
           <h1>{item.name}</h1>
-        </>
+        </div>
       ))}
     </div>
   );

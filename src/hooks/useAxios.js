@@ -6,7 +6,7 @@ function useAxios(url) {
   useEffect(() => {
      try {
         axios
-          .get(`https://dashboard.allarabinusa.com/api/v1/${url}`)
+          .get(`https://allarabinusa.com/api/v1/${url}`)
           .then((response) => setData(response.data))
       } 
       catch (error) {

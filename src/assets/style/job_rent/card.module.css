@@ -28,7 +28,6 @@
     cursor: pointer;
     padding:10px 0px;
     background: white;
-    /* width: 32%; */
     margin: 10px 0;
     max-width: 440px;
     min-width: 290px;
@@ -103,6 +102,7 @@
 }
 
 .modalSection{
+    overflow-y: scroll;
     position: fixed;
     z-index: 99999;
     background: rgba(0, 0, 0, 0.5);
@@ -147,11 +147,12 @@
 .popRentSubImage{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .popRentSubImage img{
     padding: 10px;
     height: 200px;
-    width: 285px;
+    width: 250px;
 }
 
 .popRentDiscr{
@@ -231,6 +232,7 @@
 
 .popJobLongDisc{
     padding: 15px;
+    width: 100%;
 }
 .popJobLongDisc p{ 
     margin: 0;
@@ -242,18 +244,14 @@
 .popJobContactSection{
     display: flex;
     align-items: center;
-    /* width: 50%; */
     margin: auto;
-    /* text-align: center; */
 }
 
 .popJobContactSection h3{
-    /* background: #D21A4E; */
     color: #253866;
     padding: 4px 10px;
     border-radius: 15px;
     width: fit-content;
-    /* margin: 7px auto; */
     margin: 7px;
     font-weight: bolder;
 }
@@ -265,5 +263,5 @@
 
 .popJobStrong{
     font-weight: bolder;
-    /* color: #253866; */
 }
+

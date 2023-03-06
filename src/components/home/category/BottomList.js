@@ -35,7 +35,7 @@ export default class AutoPlay extends Component {
   }
 
   componentDidMount() {
-    fetch("https://dashboard.allarabinusa.com/api/v1/en/main-categories")
+    fetch("https://allarabinusa.com/api/v1/en/main-categories")
       .then((response) => response.json())
       .then((data) => data.data)
       .then((data) => data.service)

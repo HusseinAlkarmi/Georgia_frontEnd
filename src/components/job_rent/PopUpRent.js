@@ -41,7 +41,7 @@ return(
                 <div className={style.popRentContact}>
                     <h3>Contact Us</h3>
                     <p><i className="fas fa-envelope-open-text"></i> lorem@gmail.com</p>
-                    <p><i class="fas fa-phone-alt"></i> +962 777-777-888</p>
+                    <p><i className="fas fa-phone-alt"></i> +962 777-777-888</p>
                 </div>
             </div>
 

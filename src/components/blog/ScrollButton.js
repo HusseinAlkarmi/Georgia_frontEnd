@@ -27,7 +27,7 @@ function ScrollButton() {
         onClick={handleClick}
         style={{ display: isVisible ? "block" : "none" }}
       >
-        <i class="fas fa-chevron-up text-white"></i>
+        <i className="fas fa-chevron-up text-white"></i>
       </button>
     </div>
   );

@@ -5,7 +5,7 @@ function useFetch(url, formData, token) {
 
   useEffect(() => {
      try {
-        fetch(`https://dashboard.allarabinusa.com/api/v1/${url}`, {
+        fetch(`https://allarabinusa.com/api/v1/${url}`, {
             headers: { 'Authorization': `Bearer ${token}` },
             method: 'POST',
             body: formData

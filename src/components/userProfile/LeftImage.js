@@ -5,10 +5,13 @@ import useAxios from "../../hooks/useFetchPost";
 
 function LeftImage({setShowFavourite, setShowSave, Data, setData, token}){
     const [image, setImage] = useState(Data.photo);
+    const [newImage, setNewImage] = useState();
+
     
     
     const formData = new FormData();
-    formData.append('photo', Data.photo);
+    // formData.append('photo', image);
+
     const [res] = useAxios("en/client/profile", formData, token);
 
     const imageChange = (e) => {
@@ -17,11 +20,18 @@ function LeftImage({setShowFavourite, setShowSave, Data, setData, token}){
         setImage(fileUrl);
         // console.log(fileUrl);
         setData({...Data, [e.target.name]: fileUrl});
+        setNewImage(image);
+        formData.append('photo', image);
+        console.log(res);
+        fetchAPI(newImage);
         // if(e.target.files[0] && e.target.files[0].size > 0){
         //     setImage(e.target.files[0]);
         // }
     }
 
+    function fetchAPI(image){
+        formData.append('photo', newImage);
+    }
     // console.log(Data);
 
     function handleSaveClick(){

@@ -1,29 +1,30 @@
 import React from "react";
 import style from "../../assets/style/Blog.module.css";
-import useFetch from "../../hooks/useFetch";
+import useAxios from "../../hooks/useAxios";
 
 function ColumnCards(props) {
-  const [Data] = useFetch("https://jsonplaceholder.typicode.com/users");
-  const CardsData = Data.slice(0, 3);
+  const [Data] = useAxios("en/blogs");
+  const around_georgia = Data?.data?.around_georgia;
 
   return (
-    <div className={`${style.columnCardsContainer}`}>
-      {CardsData.map((item) => (
-        <div className={style.columnCardsContainerDiv}>
+    <>
+    <h2 className={style.popularHeader}>popular</h2>
+    <div className={`${style.columnCardsContainer} pt-4`}>
+      {around_georgia?.map((item) => (
+        <div key={item.id} className={style.columnCardsContainerDiv}>
           <div className={style.colCardImg}>
             <img src={require("../../assets/Images/blog/Georgia.png")} />
           </div>
           <div className={style.paragraph}>
-            <h5>Some Title here </h5>
+            <h5>{item.title} </h5>
             <p>
-              Lorem Lorem Lorem Lorem Lorem Lorem LoremL Lorem LoremLoremL Lorem
-              Lorem LoremL Lorem Lorem LoremL Lorem Lorem LoremL Lorem Lorem
-              LoremL
+              {item.description}
             </p>
           </div>
         </div>
       ))}
     </div>
+  </>
   );
 }
 

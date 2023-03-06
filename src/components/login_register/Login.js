@@ -41,7 +41,7 @@ function Login(props){
         console.log({...userInfo});
 
 
-        axios.post("https://dashboard.allarabinusa.com/api/v1/en/login", userInfo).then((response) => {
+        axios.post("https://allarabinusa.com/api/v1/en/login", userInfo).then((response) => {
             console.log(response.data);
             // console.log(response.data.data.user.name);
             // console.log(response.data.data.token);

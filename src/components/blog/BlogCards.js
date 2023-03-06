@@ -1,15 +1,15 @@
 import React from "react";
 import style from "../../assets/style/Blog.module.css";
-import useFetch from "../../hooks/useFetch";
+import useAxios from "../../hooks/useAxios";
 
 function BlogCards(props) {
-  const [Data] = useFetch("https://jsonplaceholder.typicode.com/users");
-  const BlogCardsData = Data.slice(0, 4);
-
-  return (
+  const [Data] = useAxios("en/blogs");
+  const BlogCardsData = Data?.data?.statistics;
+  return (  
     <>
+     <h2 className={style.statisticsHeader}>statistics</h2>
       <div className={style.blogCardContainer}>
-        {BlogCardsData.map((item) => (
+        {BlogCardsData?.map((item) => (
           <div key={item.id} className={style.cardImg}>
             <div className={style.cardImageDiv}>
               <img
@@ -17,13 +17,13 @@ function BlogCards(props) {
               />
             </div>
             <div className={style.cardText}>
-              <h5>Some Title here </h5>
-              <p>Lorem ipsum dolor sit amet, consectetur ..</p>
+              <h5>{item.title}</h5>
+              <p>{item.description}</p>
             </div>
           </div>
         ))}
       </div>
-      <div class={style.cardButton}>
+      <div className={style.cardButton}>
         <button>View More</button>
       </div>
     </>

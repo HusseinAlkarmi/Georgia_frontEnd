@@ -49,9 +49,9 @@ function BlogPage() {
             <ColumnCards />
           </div>
         </div>
-
-        <div className={`${style.lastSectionContainer} pt-5`}>
-          <LastCard />
+        <div className={`pt-5`}>
+        
+            <LastCard />
         </div>
       </div>
     </div>

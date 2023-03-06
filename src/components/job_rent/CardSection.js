@@ -30,6 +30,9 @@ function CardSection({
 
   const [Data] = useAxios("en/jobs");
   const Cards = Data?.data;
+
+  // const [Data] = useAxios("ar/rents");
+  // const Cards = Data?.data;
   console.log(Cards);
   // const[Data] = useFetch('https://jsonplaceholder.typicode.com/users');
 
@@ -82,15 +85,18 @@ function CardSection({
                 <RentCard
                   key={item.id}
                   id={item.id}
-                  company={item.company}
+                  title={item.title}
+                  email={item.email}
+                  phone={item.phone_number}
+                  price={item.price}
+                  bedrooms={item.bedrooms}
+                  bathrooms={item.bathrooms}
+                  area={item.area}
+
                   created_at={item.created_at}
                   description={item.description}
-                  email={item.email}
-                  phone={item.phone}
                   place={item.place}
-                  salary={item.salary}
                   type={item.type}
-                  title={item.title}
                   user_image={item.user_image}
                   user_name={item.user_name}
                   setShowModal={setShowModal}

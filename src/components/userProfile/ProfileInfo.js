@@ -35,7 +35,7 @@ function ProfileInfo({setShowFavourite, setShowSave}){
         // console.log(token);
 
            try {
-              axios.get('https://dashboard.allarabinusa.com/api/v1/en/client/profile', {
+              axios.get('https://allarabinusa.com/api/v1/en/client/profile', {
                 headers: { 'Authorization': `Bearer ${token}` }
               }).then((response) => response.data).then(data => setData(data.data));
             } 

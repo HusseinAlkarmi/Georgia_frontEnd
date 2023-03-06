@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import style from "../../assets/style/Blog.module.css";
-import useFetch from "../../hooks/useFetch";
+import useAxios from "../../hooks/useAxios";
 
 function EventCards(props) {
-  const [Data] = useFetch("https://jsonplaceholder.typicode.com/users");
-  const EventCardsData = Data.slice(0, 2);
+  const [Data] = useAxios("en/blogs");
+  const latest_post = Data?.data?.evens;
 
   return (
     <>
       <div className={` pt-3 ${style.eventContainer}`}>
         <h3>Latest Posts</h3>
-        {EventCardsData.map((data) => (
-          <div className={`${style.eventColCardDiv} row pt-3`}>
+        {latest_post?.map((data) => (
+          <div key={data.id} className={`${style.eventColCardDiv} row pt-3`}>
             <div className={`col-5 ${style.leftEventext}`}>
-              <p>loremmmmm lorem lorem lorem</p>
+              <p>{data.title}</p>
             </div>
             <div className={`${style.rightCardImg} col-7`}>
               <img src={require("../../assets/Images/blog/firstBlog.png")} />

@@ -17,7 +17,7 @@ function NavSearch() {
           onChange={handleSearchInput}
         />
         <a href="#" className={style.searchBtn}>
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
         </a>
       </div>
     </>
